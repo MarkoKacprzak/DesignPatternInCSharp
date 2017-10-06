@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Behavioral.Memento.Caretaker">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Memento\Caretaker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Memento" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Memento.Memento">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Behavioral\Memento\Memento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Memento.Originator">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="State" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAACQAAAAAAAAABAAAABAAAAAA=</HashCode>
+      <FileName>Behavioral\Memento\Originator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Memento" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

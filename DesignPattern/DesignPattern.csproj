@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AB6CF89-8BF6-48F9-A27A-E94896A7ECD0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPattern</RootNamespace>
+    <AssemblyName>DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavioral\ChainOfResponsibility\CEO.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Demo.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Director.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Handler.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Request.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\RequestType.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\VP.cs" />
+    <Compile Include="Behavioral\Command\AllLightsCommand.cs" />
+    <Compile Include="Behavioral\Command\Command.cs" />
+    <Compile Include="Behavioral\Command\Demo.cs" />
+    <Compile Include="Behavioral\Command\Light.cs" />
+    <Compile Include="Behavioral\Command\OnCommand.cs" />
+    <Compile Include="Behavioral\Command\Switch.cs" />
+    <Compile Include="Behavioral\Command\ToggleCommand.cs" />
+    <Compile Include="Behavioral\Interpreter\AndExpression.cs" />
+    <Compile Include="Behavioral\Interpreter\Client.cs" />
+    <Compile Include="Behavioral\Interpreter\Context.cs" />
+    <Compile Include="Behavioral\Interpreter\Demo.cs" />
+    <Compile Include="Behavioral\Interpreter\Expression.cs" />
+    <Compile Include="Behavioral\Interpreter\OrExpression.cs" />
+    <Compile Include="Behavioral\Interpreter\TerminalExpression.cs" />
+    <Compile Include="Behavioral\Iterator\Aggregate.cs" />
+    <Compile Include="Behavioral\Iterator\Client.cs" />
+    <Compile Include="Behavioral\Iterator\ConcreteAggregate.cs" />
+    <Compile Include="Behavioral\Iterator\ConcreteIterator.cs" />
+    <Compile Include="Behavioral\Iterator\Demo.cs" />
+    <Compile Include="Behavioral\Iterator\Iterator.cs" />
+    <Compile Include="Behavioral\Mediator\Colleague.cs" />
+    <Compile Include="Behavioral\Mediator\ConcreteColleague1.cs" />
+    <Compile Include="Behavioral\Mediator\ConcreteColleague2.cs" />
+    <Compile Include="Behavioral\Mediator\ConcreteMediator.cs" />
+    <Compile Include="Behavioral\Mediator\Demo.cs" />
+    <Compile Include="Behavioral\Mediator\Mediator.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\Command.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\ConcreteMediator.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\Demo.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\Light.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\Mediator.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\TurnOffAllLightsCommand.cs" />
+    <Compile Include="Behavioral\Mediator\Sample2\TurnOnAllLightsCommand.cs" />
+    <Compile Include="Behavioral\Memento\Caretaker.cs" />
+    <Compile Include="Behavioral\Memento\Demo.cs" />
+    <Compile Include="Behavioral\Memento\Memento.cs" />
+    <Compile Include="Behavioral\Memento\Originator.cs" />
+    <Compile Include="Behavioral\Observer\ConcreteObserver.cs" />
+    <Compile Include="Behavioral\Observer\ConcreteSubject.cs" />
+    <Compile Include="Behavioral\Observer\Demo.cs" />
+    <Compile Include="Behavioral\Observer\Observer.cs" />
+    <Compile Include="Behavioral\Observer\Subject.cs" />
+    <Compile Include="Behavioral\Patterns.cs" />
+    <Compile Include="Behavioral\State\ConcreteStateA.cs" />
+    <Compile Include="Behavioral\State\ConcreteStateB.cs" />
+    <Compile Include="Behavioral\State\Context.cs" />
+    <Compile Include="Behavioral\State\Demo.cs" />
+    <Compile Include="Behavioral\State\State.cs" />
+    <Compile Include="Behavioral\Strategy\ConcreteStrategyA.cs" />
+    <Compile Include="Behavioral\Strategy\ConcreteStrategyB.cs" />
+    <Compile Include="Behavioral\Strategy\ConcreteStrategyC.cs" />
+    <Compile Include="Behavioral\Strategy\Context.cs" />
+    <Compile Include="Behavioral\Strategy\Demo.cs" />
+    <Compile Include="Behavioral\Strategy\Strategy.cs" />
+    <Compile Include="Behavioral\TemplateMethod\AbstractClass.cs" />
+    <Compile Include="Behavioral\TemplateMethod\ConcreteClassA.cs" />
+    <Compile Include="Behavioral\TemplateMethod\ConcreteClassB.cs" />
+    <Compile Include="Behavioral\TemplateMethod\Demo.cs" />
+    <Compile Include="Behavioral\Visitor\Client.cs" />
+    <Compile Include="Behavioral\Visitor\ConcreteElementA.cs" />
+    <Compile Include="Behavioral\Visitor\ConcreteElementB.cs" />
+    <Compile Include="Behavioral\Visitor\ConcreteVisitor1.cs" />
+    <Compile Include="Behavioral\Visitor\ConcreteVisitor2.cs" />
+    <Compile Include="Behavioral\Visitor\Demo.cs" />
+    <Compile Include="Behavioral\Visitor\Element.cs" />
+    <Compile Include="Behavioral\Visitor\ObjectStructure.cs" />
+    <Compile Include="Behavioral\Visitor\Visitor.cs" />
+    <Compile Include="IDemo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UML\Behavioral\Visitor.cd" />
+    <None Include="UML\Behavioral\TemplateMethod.cd" />
+    <None Include="UML\Behavioral\Strategy.cd" />
+    <None Include="UML\Behavioral\State.cd" />
+    <None Include="UML\Behavioral\Observer.cd" />
+    <None Include="UML\Behavioral\Memento.cd" />
+    <None Include="UML\Behavioral\Mediator.cd" />
+    <None Include="UML\Behavioral\Iterator.cd" />
+    <None Include="UML\Behavioral\ChainOfResponsibility.cd" />
+    <None Include="UML\Behavioral\Interpreter.cd" />
+    <None Include="UML\Behavioral\Command.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

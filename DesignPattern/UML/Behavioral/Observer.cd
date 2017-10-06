@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Behavioral.Observer.ConcreteObserver">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_subject" Hidden="true" />
+      <Method Name="ConcreteObserver" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="DesignPattern.Behavioral.Observer.Observer" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="1.603" />
+        <Point X="4.25" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAIAAAA=</HashCode>
+      <FileName>Behavioral\Observer\ConcreteObserver.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_subject" />
+      <Property Name="Observes" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Observer.ConcreteSubject">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Observer\ConcreteSubject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Observer.Observer">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Observer\Observer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Observer.Subject">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_observers" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAIAAAAAAAAAAIAAAABAAAAAAAQAAAA=</HashCode>
+      <FileName>Behavioral\Observer\Subject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Notifies" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

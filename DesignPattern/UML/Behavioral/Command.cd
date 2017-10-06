@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Behavioral.Command.ToggleCommand" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <AssociationLine Name="light" Type="DesignPattern.Behavioral.Command.Light">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.142" Y="-0.051" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAIAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Command\ToggleCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="light" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.Light">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAABAAAAAQAEABAAAAAAAAAAAIA=</HashCode>
+      <FileName>Behavioral\Command\Light.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.OnCommand" BaseTypeListCollapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAIAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Command\OnCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="light" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.Switch">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <Members>
+      <Method Name="Switch" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Command\Switch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="command" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.Command">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Command\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

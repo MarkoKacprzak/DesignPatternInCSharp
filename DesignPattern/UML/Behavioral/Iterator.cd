@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Behavioral.Iterator.Iterator&lt;T&gt;">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Iterator\Iterator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Iterator.Aggregate&lt;T&gt;">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Iterator\Aggregate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Iterator.ConcreteAggregate&lt;T&gt;">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <Members>
+      <Field Name="_items" Hidden="true" />
+      <Property Name="Count" Hidden="true" />
+      <Property Name="this" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACCAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Iterator\ConcreteAggregate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Iterator.ConcreteIterator&lt;T&gt;" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.75" />
+    <InheritanceLine Type="DesignPattern.Behavioral.Iterator.Iterator&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="5.375" Y="2.18" />
+        <Point X="5.375" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQQAAAAAAAAAAABAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Behavioral\Iterator\ConcreteIterator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_aggregate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Iterator.Client&lt;T&gt;">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="Context" Hidden="true" />
+      <Property Name="Expression" Hidden="true" />
+    </Members>
+    <AssociationLine Name="expression" Type="DesignPattern.Behavioral.Iterator.Aggregate&lt;T&gt;">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.049" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="context" Type="DesignPattern.Behavioral.Iterator.Iterator&lt;T&gt;">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.004" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Iterator\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="expression" />
+      <Field Name="context" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Behavioral.Visitor.Visitor">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\Visitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.ConcreteElementA">
+    <Position X="1.75" Y="5.75" Width="1.75" />
+    <Members>
+      <Method Name="OperationA" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\ConcreteElementA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.ConcreteElementB">
+    <Position X="4" Y="5.75" Width="1.75" />
+    <Members>
+      <Method Name="OperationB" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\ConcreteElementB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.ConcreteVisitor1">
+    <Position X="2.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\ConcreteVisitor1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.ConcreteVisitor2">
+    <Position X="4.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\ConcreteVisitor2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.Element">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.ObjectStructure">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAAIAAAgAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\ObjectStructure.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Element" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Visitor.Client">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Visitor\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="objectStructure" />
+      <Field Name="visitor" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
