@@ -8,8 +8,8 @@
     </Members>
     <InheritanceLine Type="DesignPattern.Behavioral.Interpreter.Expression" FixedFromPoint="true">
       <Path>
-        <Point X="4.438" Y="2.353" />
-        <Point X="4.438" Y="2.558" />
+        <Point X="4.938" Y="2.353" />
+        <Point X="4.938" Y="2.558" />
         <Point X="2.125" Y="2.558" />
         <Point X="2.125" Y="2.75" />
       </Path>
@@ -26,28 +26,32 @@
     </Members>
     <InheritanceLine Type="DesignPattern.Behavioral.Interpreter.Expression" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.438" Y="2.353" />
+        <Point X="4.938" Y="2.353" />
+        <Point X="4.938" Y="2.558" />
+        <Point X="4.438" Y="2.558" />
         <Point X="4.438" Y="2.75" />
       </Path>
     </InheritanceLine>
     <AssociationLine Name="expr1" Type="DesignPattern.Behavioral.Interpreter.Expression" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="5.561" Y="2.75" />
-        <Point X="5.561" Y="2" />
-        <Point X="5.25" Y="2" />
+        <Point X="5.561" Y="2.558" />
+        <Point X="5.562" Y="2.558" />
+        <Point X="5.562" Y="2.353" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.262" Y="-0.164" />
+        <Position X="-0.164" Y="0.262" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="expr2" Type="DesignPattern.Behavioral.Interpreter.Expression" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="5.562" Y="2.75" />
-        <Point X="5.562" Y="2" />
-        <Point X="5.25" Y="2" />
+        <Point X="5.562" Y="2.558" />
+        <Point X="5.562" Y="2.558" />
+        <Point X="5.562" Y="2.353" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.262" Y="-0.149" />
+        <Position X="-0.149" Y="0.262" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -60,7 +64,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Behavioral.Interpreter.Expression">
-    <Position X="3" Y="1.25" Width="2.25" />
+    <Position X="3.5" Y="1.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\Interpreter\Expression.cs</FileName>
@@ -73,10 +77,8 @@
     </Members>
     <InheritanceLine Type="DesignPattern.Behavioral.Interpreter.Expression" FixedFromPoint="true">
       <Path>
-        <Point X="4.438" Y="2.353" />
-        <Point X="4.438" Y="2.558" />
-        <Point X="5.478" Y="2.558" Type="JumpStart" />
-        <Point X="5.646" Y="2.558" Type="JumpEnd" />
+        <Point X="4.938" Y="2.353" />
+        <Point X="4.938" Y="2.558" />
         <Point X="7.125" Y="2.558" />
         <Point X="7.125" Y="2.75" />
       </Path>
@@ -85,7 +87,7 @@
       <Path>
         <Point X="7.688" Y="2.75" />
         <Point X="7.688" Y="1.688" />
-        <Point X="5.25" Y="1.688" />
+        <Point X="5.75" Y="1.688" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="1.586" Y="0.139" />
@@ -95,7 +97,7 @@
       <Path>
         <Point X="7.688" Y="2.75" />
         <Point X="7.688" Y="1.688" />
-        <Point X="5.25" Y="1.688" />
+        <Point X="5.75" Y="1.688" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="1.572" Y="0.11" />
@@ -111,14 +113,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Behavioral.Interpreter.Client">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\Interpreter\Client.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="context" />
       <Field Name="expression" />
+      <Field Name="context" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Behavioral.Interpreter.Context" Collapsed="true">

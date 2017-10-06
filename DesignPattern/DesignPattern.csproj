@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behavioral\ChainOfResponsibility\CEO.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Client.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Demo.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Director.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Handler.cs" />

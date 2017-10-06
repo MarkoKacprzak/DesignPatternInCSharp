@@ -7,13 +7,6 @@
       <FileName>Behavioral\ChainOfResponsibility\CEO.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Demo">
-    <Position X="9" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>Behavioral\ChainOfResponsibility\ChainOfResponsibilityDemo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Director">
     <Position X="3" Y="2.25" Width="1.5" />
     <TypeIdentifier>
@@ -22,17 +15,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Handler">
-    <Position X="3" Y="0.5" Width="2" />
+    <Position X="1.5" Y="0.5" Width="2" />
     <Members>
       <Method Name="setSuccessor" Hidden="true" />
     </Members>
     <AssociationLine Name="successor" Type="DesignPattern.Behavioral.ChainOfResponsibility.Handler" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3" Y="1.192" />
-        <Point X="2.625" Y="1.192" />
-        <Point X="2.625" Y="0.125" />
-        <Point X="3.667" Y="0.125" />
-        <Point X="3.667" Y="0.5" />
+        <Point X="1.5" Y="1.192" />
+        <Point X="1.25" Y="1.192" />
+        <Point X="1.25" Y="0.125" />
+        <Point X="2.167" Y="0.125" />
+        <Point X="2.167" Y="0.5" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.162" Y="0.175" />
@@ -52,6 +45,16 @@
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\ChainOfResponsibility\VP.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Client" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\ChainOfResponsibility\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="handler" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
