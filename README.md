@@ -97,3 +97,29 @@ Umożliwienie zdefiniowanie nowej operacji dla hierarchii bez konieczności zmia
 <b>Visitor:</b>
 <br>
 <img src="Visitor.png"><br>
+
+## Structural (Wzorce strukturalne)
+Zajmują się związkami pomiędzy obiektami i tym jaka powinna być interakcja między nimi. Wszystko w celu ułożenia złożonego obiektu.
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+
+<b>Adapter:</b>
+<br>
+<img src="Adapter.png"><br>
+<b>Bridge:</b>
+<br>
+<img src="Bridge.png"><br>
+<b>Composite:</b>
+<br>
+<img src="Composite.png"><br>
+<b>Decorator:</b>
+<br>
+<img src="Decorator.png"><br>
+<b>Facade:</b>
+<br>
+<img src="Facade.png"><br>
