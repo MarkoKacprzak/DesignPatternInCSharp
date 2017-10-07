@@ -1,16 +1,15 @@
-﻿using System;
-namespace DesignPattern
+﻿namespace DesignPattern
 {
     class Program
     {
         static void Main(string[] args)
         {
-            foreach (var demo in Behavioral.Patterns.All())
-            //foreach (var demo in Behavioral.Patterns.List)
-            {
-                Console.WriteLine($"\n{demo.Name}");
-                demo.Run();
-            }
+            Get.Run("Behavioral");
+            //Get.All("DesignPattern.Behavioral").Run();
+            //Behavioral.Patterns.All.Run();
+            Get.Run("Structural");
+            //Get.All("DesignPattern.Structural").Run();
+            //Structural.Patterns.All.Run();
         }
     }
 }

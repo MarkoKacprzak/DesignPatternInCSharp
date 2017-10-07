@@ -20,22 +20,7 @@ namespace DesignPattern.Behavioral
                 new TemplateMethod.Demo(),
                 new Visitor.Demo(),
             };
-        public static List<IDemo> All()
-        {
-            var list = new List<IDemo>();
-
-            var types = System.AppDomain.CurrentDomain.GetAssemblies().ToList()
-                .SelectMany(a => a.GetTypes())
-                .Where(t => typeof(IDemo).IsAssignableFrom(t))
-                .Where(t => t.IsClass)
-                .Where(t => t.Namespace.StartsWith("DesignPattern.Behavioral"))
-                .OrderBy(t=>t.Namespace);
-
-            foreach (var t in types)
-            {
-                list.Add((IDemo)System.Activator.CreateInstance(t));
-            }
-            return list;
-        }
+        public static IEnumerable<IDemo> All =>
+            Get.All("DesignPattern.Behavioral");
     }
 }
