@@ -63,3 +63,37 @@ Umożliwienie zdefiniowanie nowej operacji dla hierarchii bez konieczności zmia
 * Observer
 ### Wzorce konstrukcyjne
 * Memento
+## Diagramy:
+<b>Chain of Responsibility:</b>
+<br>
+<img src="ChainOfResponsibility.png"><br>
+<b>Command:</b>
+<br>
+<img src="Interpreter.png"><br>
+<b>Interpreter:</b>
+<br>
+<img src="Interpreter.png"><br>
+<b>Iterator:</b>
+<br>
+<img src="Iterator.png"><br>
+<b>Mediator:</b>
+<br>
+<img src="Mediator.png"><br>
+<b>Memento:</b>
+<br>
+<img src="Memento.png"><br>
+<b>Observer:</b>
+<br>
+<img src="Observer.png"><br>
+<b>State:</b>
+<br>
+<img src="State.png"><br>
+<b>Strategy:</b>
+<br>
+<img src="Strategy.png"><br>
+<b>Template Method:</b>
+<br>
+<img src="TemplateMethod.png"><br>
+<b>Visitor:</b>
+<br>
+<img src="Visitor.png"><br>
