@@ -163,3 +163,51 @@ Pozwolić obiektowi działać w imieniu innego obiektu
 <b>Proxy:</b>
 <br>
 <img src="Proxy.png"><br>
+## 3 Creational (Wzorce konstrukcyjne)
+Zajmują się konstrukcją obiektów i ich referencjami
+* Abstract Factory
+* Builder
+* Factory Method
+* Prototype
+*	Singleton
+## Wzorzec ma na celu:
+* Abstract Factory
+
+Stworzyć rodzinę obiektów posiadających określoną cechę wspólną.
+* Builder
+
+Stopniowo zbierać informacje o obiekcie przed przystąpieniem do jego konstrukcji.
+* Factory Method
+
+Zwolnić klienta z obowiązku "znajomości" konkretnej klasy, której instancja ma być stworzona.
+* Prototype
+
+Stworzyć obiekt na podstawie obiektu przykładowego
+*	Singleton
+
+Skupić całą odpowiedzialność w jednej instancji klasy
+## Wzorce konstrukcyjne można podzielić na grupy:
+### Wzorce  konstrukcyjne
+* Abstract Factory 
+* Builder
+* Factory Method
+* Prototype
+### Wzorce odpowiedzialności
+* Singleton
+
+## Diagramy:
+<b>Abstract Factory :</b>
+<br>
+<img src="AbstractFactory.png"><br>
+<b>Builder:</b>
+<br>
+<img src="Builder.png"><br>
+<b>Factory Method:</b>
+<br>
+<img src="FactoryMethod.png"><br>
+<b>Prototype:</b>
+<br>
+<img src="Prototype.png"><br>
+<b>Singleton:</b>
+<br>
+<img src="Singleton.png"><br>
