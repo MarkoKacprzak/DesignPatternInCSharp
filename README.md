@@ -1,6 +1,6 @@
 # DesignPatternInCSharp
 Design Pattern In C#:
-## Behavioral (Wzorce zachowania)
+## 1 Behavioral (Wzorce zachowania)
 Zajmują się komunikacją pomiędzy obiektami. Głównie występują w algorytmach i w skomplikowanych systemach odpowiedzialności pomiędzy obiektami.
 * Chain of Responsibility
 * Command
@@ -98,7 +98,7 @@ Umożliwienie zdefiniowanie nowej operacji dla hierarchii bez konieczności zmia
 <br>
 <img src="Visitor.png"><br>
 
-## Structural (Wzorce strukturalne)
+## 2 Structural (Wzorce strukturalne)
 Zajmują się związkami pomiędzy obiektami i tym jaka powinna być interakcja między nimi. Wszystko w celu ułożenia złożonego obiektu.
 * Adapter
 * Bridge
@@ -107,7 +107,41 @@ Zajmują się związkami pomiędzy obiektami i tym jaka powinna być interakcja 
 * Facade
 * Flyweight
 * Proxy
+## Wzorzec ma na celu:
+* Adapter
 
+Zadaptować istniejący interfejs klasy do postaci oczekiwanej przez klienta	
+* Bridge
+
+Oddzielić operacje abstrakcyjne od ich implementacji w celu wprowadzania w nich niezależnych zmian.
+* Composite
+
+Zdefiniować interfejs uwzględniający zarówno pojedyńcze obiekty, jak i grupy obiektów
+* Decorator
+
+Umożliwienie programistom dynamicznego tworzenia zachowania
+* Facade
+
+Stworzyć prosty interfejs dla zestawu klas
+* Flyweight
+
+Skupić odpowiedzialność w drobnych, współużytkowanych obiektach
+* Proxy
+
+Pozwolić obiektowi działać w imieniu innego obiektu
+## Wzorce strukturalne można podzielić na grupy:
+### Wzorce odpowiedzialności
+* Proxy
+* Flyweight
+### Wzorce interfejsów
+* Adapter
+* Bridge
+* Composite
+* Facade
+### Wzorce rozszerzeń
+* Decorator
+
+## Diagramy:
 <b>Adapter:</b>
 <br>
 <img src="Adapter.png"><br>
