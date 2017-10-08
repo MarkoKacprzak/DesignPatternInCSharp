@@ -149,9 +149,22 @@
     <Compile Include="Structural\Facade\SubSystemFour.cs" />
     <Compile Include="Structural\Facade\SubSystemThree.cs" />
     <Compile Include="Structural\Facade\SubSystemTwo.cs" />
+    <Compile Include="Structural\Flyweight\Client.cs" />
+    <Compile Include="Structural\Flyweight\ConcreteFlyweight.cs" />
+    <Compile Include="Structural\Flyweight\Demo.cs" />
+    <Compile Include="Structural\Flyweight\Flyweight.cs" />
+    <Compile Include="Structural\Flyweight\FlyweightFactory.cs" />
+    <Compile Include="Structural\Flyweight\UnsharedConcreteFlyweight.cs" />
     <Compile Include="Structural\Patterns.cs" />
+    <Compile Include="Structural\Proxy\Client.cs" />
+    <Compile Include="Structural\Proxy\Demo.cs" />
+    <Compile Include="Structural\Proxy\Proxy.cs" />
+    <Compile Include="Structural\Proxy\RealSubject.cs" />
+    <Compile Include="Structural\Proxy\Subject.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="UML\Structural\Proxy.cd" />
+    <None Include="UML\Structural\Flyweight.cd" />
     <None Include="UML\Structural\Facade.cd" />
     <None Include="UML\Structural\Decorator.cd" />
     <None Include="UML\Structural\Composite.cd" />

@@ -12,6 +12,8 @@ namespace DesignPattern.Structural
                 new Composite.Demo(),
                 new Decorator.Demo(),
                 new Facade.Demo(),
+                new Flyweight.Demo(),
+                new Proxy.Demo(),
             };
         public static IEnumerable<IDemo> All =>
            Get.All("DesignPattern.Structural");

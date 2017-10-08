@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Structural.Flyweight.ConcreteFlyweight">
+    <Position X="4.75" Y="2" Width="1.75" />
+    <InheritanceLine Type="DesignPattern.Structural.Flyweight.Flyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.438" Y="1.603" />
+        <Point X="4.438" Y="1.808" />
+        <Point X="5.062" Y="1.808" />
+        <Point X="5.062" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural\Flyweight\ConcreteFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Structural.Flyweight.Flyweight">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural\Flyweight\Flyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Structural.Flyweight.FlyweightFactory">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="flyweights" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Structural\Flyweight\FlyweightFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="flyweight" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Structural.Flyweight.UnsharedConcreteFlyweight">
+    <Position X="2.25" Y="2" Width="2.25" />
+    <InheritanceLine Type="DesignPattern.Structural.Flyweight.Flyweight" FixedFromPoint="true">
+      <Path>
+        <Point X="3.938" Y="1.603" />
+        <Point X="3.938" Y="1.808" />
+        <Point X="3.375" Y="1.808" />
+        <Point X="3.375" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural\Flyweight\UnsharedConcreteFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Structural.Flyweight.Client" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <AssociationLine Name="flyweight1" Type="DesignPattern.Structural.Flyweight.UnsharedConcreteFlyweight" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.562" Y="3.562" />
+        <Point X="1.562" Y="3.666" />
+        <Point X="3.375" Y="3.666" />
+        <Point X="3.375" Y="3.233" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="flyweight2" Type="DesignPattern.Structural.Flyweight.ConcreteFlyweight" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.062" Y="3.562" />
+        <Point X="1.062" Y="3.749" />
+        <Point X="5.661" Y="3.749" />
+        <Point X="5.661" Y="3.233" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.047" Y="0.268" Height="0.182" Width="0.85" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structural\Flyweight\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="flyweight1" />
+      <Field Name="flyweight2" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
