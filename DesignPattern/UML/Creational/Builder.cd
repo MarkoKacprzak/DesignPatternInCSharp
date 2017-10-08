@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Creational.Builder.Product" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\Builder\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.Builder.Builder">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Creational\Builder\Builder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.Builder.ConcreteBuilder1" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="_product" Type="DesignPattern.Creational.Builder.Product" ManuallyRouted="true">
+      <Path>
+        <Point X="5" Y="3.191" />
+        <Point X="5" Y="3.408" />
+        <Point X="2" Y="3.408" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.145" Y="0.025" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAMAAAAAAAAA=</HashCode>
+      <FileName>Creational\Builder\ConcreteBuilder1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Creational.Builder.ConcreteBuilder2" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <AssociationLine Name="_product" Type="DesignPattern.Creational.Builder.Product">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.083" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAMAAAAAAAAA=</HashCode>
+      <FileName>Creational\Builder\ConcreteBuilder2.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Creational.Builder.Director">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\Builder\Director.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="builder" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

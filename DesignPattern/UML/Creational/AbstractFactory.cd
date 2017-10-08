@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Creational.AbstractFactory.AbstractFactory" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\AbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.AbstractProductA">
+    <Position X="1.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\AbstractProductA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.AbstractProductB" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\AbstractProductB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.Client">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="_abstractProductA" Type="DesignPattern.Creational.AbstractFactory.AbstractProductA">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.376" Y="0.169" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Creational\AbstractFactory\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_abstractProductA" />
+      <Field Name="_abstractProductB" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ConcreteFactory1">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <AssociationLine Name="ProductA" Type="DesignPattern.Creational.AbstractFactory.ProductA1" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.688" Y="3.175" />
+        <Point X="4.688" Y="4.612" />
+        <Point X="1.625" Y="4.612" />
+        <Point X="1.625" Y="4.191" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ProductB" Type="DesignPattern.Creational.AbstractFactory.ProductB1" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="3.175" />
+        <Point X="5.25" Y="6.862" />
+        <Point X="1.25" Y="6.862" />
+        <Point X="1.25" Y="6.691" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAIAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ConcreteFactory1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ProductA" />
+      <Field Name="ProductB" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ConcreteFactory2">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="ProductA" Type="DesignPattern.Creational.AbstractFactory.ProductA2" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="3.175" />
+        <Point X="6.188" Y="3.75" />
+        <Point X="5.333" Y="3.75" Type="JumpStart" />
+        <Point X="5.167" Y="3.75" Type="JumpEnd" />
+        <Point X="4.771" Y="3.75" Type="JumpStart" />
+        <Point X="4.604" Y="3.75" Type="JumpEnd" />
+        <Point X="4.25" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ProductB" Type="DesignPattern.Creational.AbstractFactory.ProductB2" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.175" />
+        <Point X="6.75" Y="6.346" />
+        <Point X="5.333" Y="6.346" Type="JumpStart" />
+        <Point X="5.167" Y="6.346" Type="JumpEnd" />
+        <Point X="4.25" Y="6.346" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAIAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ConcreteFactory2.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ProductA" />
+      <Field Name="ProductB" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ProductA1" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ProductA1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ProductA2" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ProductA2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ProductB1" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ProductB1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.AbstractFactory.ProductB2" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\ProductB2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

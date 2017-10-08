@@ -10,6 +10,9 @@
             Get.Run("Structural");
             //Get.All("DesignPattern.Structural").Run();
             //Structural.Patterns.All.Run();
+            Get.Run("Creational");
+            //Get.All("DesignPattern.Creational").Run();
+            //Creational.Patterns.All.Run();
         }
     }
 }

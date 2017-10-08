@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Creational.Prototype.ConcretePrototype1">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="ConcretePrototype1" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="DesignPattern.Creational.Prototype.Prototype" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.125" Y="1.603" />
+        <Point X="3.125" Y="2.375" />
+        <Point X="2.75" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Creational\Prototype\ConcretePrototype1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.Prototype.ConcretePrototype2">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="ConcretePrototype2" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="DesignPattern.Creational.Prototype.Prototype" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.125" Y="1.603" />
+        <Point X="3.125" Y="2.375" />
+        <Point X="3.5" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Creational\Prototype\ConcretePrototype2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.Prototype.Prototype">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_id" Hidden="true" />
+      <Property Name="Id" Hidden="true" />
+      <Method Name="Prototype" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Creational\Prototype\Prototype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Creational.Prototype.Client">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\Prototype\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="prototype" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
