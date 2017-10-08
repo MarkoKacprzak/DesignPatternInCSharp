@@ -123,3 +123,9 @@ Zajmują się związkami pomiędzy obiektami i tym jaka powinna być interakcja 
 <b>Facade:</b>
 <br>
 <img src="Facade.png"><br>
+<b>Flyweight:</b>
+<br>
+<img src="Flyweight.png"><br>
+<b>Proxy:</b>
+<br>
+<img src="Proxy.png"><br>
