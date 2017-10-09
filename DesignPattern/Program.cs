@@ -13,6 +13,8 @@
             Get.Run("Creational");
             //Get.All("DesignPattern.Creational").Run();
             //Creational.Patterns.All.Run();
+            Get.Sample("Behavioral");
+            Get.Sample("Creational");
         }
     }
 }

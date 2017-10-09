@@ -34,11 +34,20 @@ namespace DesignPattern
         static private int countPattern=1;
         public static void Run(string patternNamespace)
         {
-            Console.WriteLine($"\n{countPattern++} {patternNamespace} patterns:");
+            Console.WriteLine($"\n------------- {countPattern++} {patternNamespace} patterns:");
             All(patternNamespace).ToList().ForEach(demo =>
             {
-                Console.WriteLine($"\n{demo.Name}");
+                Console.WriteLine($"\n---{demo.Name}:---");
                 demo.Run();
+            });
+        }
+        public static void Sample(string patternNamespace)
+        {
+            Console.WriteLine($"\n------------- {patternNamespace} sample:");
+            AllSample(patternNamespace).ToList().ForEach(sample =>
+            {
+                Console.WriteLine($"\n---{sample.GetType()}:---");
+                sample.Run();
             });
         }
     }
