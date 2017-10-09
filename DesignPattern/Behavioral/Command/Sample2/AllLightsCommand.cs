@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignPattern.Behavioral.Command
+namespace DesignPattern.Behavioral.Command.Sample2
 {
     public class AllLightsCommand : Command
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DesignPattern.Behavioral.Command
+namespace DesignPattern.Behavioral.Command.Sample2
 {
     public class Light
     {

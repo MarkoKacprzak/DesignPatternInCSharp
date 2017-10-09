@@ -1,63 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DesignPattern.Behavioral.Command.ToggleCommand" BaseTypeListCollapsed="true">
-    <Position X="7" Y="6.5" Width="1.75" />
-    <AssociationLine Name="light" Type="DesignPattern.Behavioral.Command.Light">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.142" Y="-0.051" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAIAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\Command\ToggleCommand.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="light" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="DesignPattern.Behavioral.Command.Light">
-    <Position X="2.75" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAABAAAAAQAEABAAAAAAAAAAAIA=</HashCode>
-      <FileName>Behavioral\Command\Light.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DesignPattern.Behavioral.Command.OnCommand" BaseTypeListCollapsed="true">
-    <Position X="5" Y="6.5" Width="1.75" />
-    <InheritanceLine Type="DesignPattern.Behavioral.Command.Command" FixedToPoint="true">
-      <Path>
-        <Point X="6.75" Y="5.853" />
-        <Point X="6.75" Y="6.125" />
-        <Point X="5.948" Y="6.125" />
-        <Point X="5.948" Y="6.5" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAIAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\Command\OnCommand.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="light" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="DesignPattern.Behavioral.Command.Switch">
-    <Position X="2.75" Y="4.75" Width="1.5" />
-    <Members>
-      <Method Name="Switch" Hidden="true" />
-    </Members>
-    <TypeIdentifier>
-      <HashCode>AIAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\Command\Switch.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="command" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="DesignPattern.Behavioral.Command.Command">
-    <Position X="6" Y="4.75" Width="1.5" />
+    <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\Command\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.ConcreteCommand">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <Members>
+      <Method Name="ConcreteCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\Command\ConcreteCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="receiver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.Invoker">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="SetCommand" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Behavioral\Command\Invoker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_command" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.Command.Receiver">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Behavioral\Command\Receiver.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

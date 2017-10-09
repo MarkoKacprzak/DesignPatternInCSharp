@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPattern.Behavioral.ChainOfResponsibility
+namespace DesignPattern.Behavioral.ChainOfResponsibility.Sample
 {
     public class VP : Handler
     {

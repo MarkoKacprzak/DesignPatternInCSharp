@@ -1,53 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.CEO">
-    <Position X="1.25" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\ChainOfResponsibility\CEO.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Director">
-    <Position X="3" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\ChainOfResponsibility\Director.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Handler">
-    <Position X="1.5" Y="0.5" Width="2" />
-    <Members>
-      <Method Name="setSuccessor" Hidden="true" />
-    </Members>
+    <Position X="2.5" Y="0.5" Width="2" />
     <AssociationLine Name="successor" Type="DesignPattern.Behavioral.ChainOfResponsibility.Handler" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="1.5" Y="1.192" />
-        <Point X="1.25" Y="1.192" />
-        <Point X="1.25" Y="0.125" />
-        <Point X="2.167" Y="0.125" />
-        <Point X="2.167" Y="0.5" />
+        <Point X="2.5" Y="1.192" />
+        <Point X="2.125" Y="1.192" />
+        <Point X="2.125" Y="0.125" />
+        <Point X="3.167" Y="0.125" />
+        <Point X="3.167" Y="0.5" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.162" Y="0.175" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Behavioral\ChainOfResponsibility\Handler.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="successor" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.VP">
-    <Position X="4.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Behavioral\ChainOfResponsibility\VP.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.Client" Collapsed="true">
-    <Position X="4.5" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\ChainOfResponsibility\Client.cs</FileName>
@@ -55,6 +31,20 @@
     <ShowAsAssociation>
       <Field Name="handler" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.ConcreteHandler1">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\ChainOfResponsibility\ConcreteHandler1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Behavioral.ChainOfResponsibility.ConcreteHandler2">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral\ChainOfResponsibility\ConcreteHandler2.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

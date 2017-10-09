@@ -1,12 +1,17 @@
 ﻿namespace DesignPattern.Behavioral.ChainOfResponsibility
 {
-    public abstract class Handler
+    /// <summary>
+    /// The 'Handler' abstract class
+    /// </summary>
+    abstract class Handler
     {
         protected Handler successor;
-        public void setSuccessor(Handler successor)
+
+        public void SetSuccessor(Handler successor)
         {
             this.successor = successor;
         }
-        public abstract void handleRequest(Request request);
+
+        public abstract void HandleRequest(int request);
     }
 }

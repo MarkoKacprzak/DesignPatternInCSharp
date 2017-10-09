@@ -1,27 +1,25 @@
-﻿using System.Collections.Generic;
-
-namespace DesignPattern.Behavioral.Command
+﻿namespace DesignPattern.Behavioral.Command
 {
-    public class Demo: IDemo
+    /// <summary>
+    /// MainApp startup class for Structural 
+    /// Command Design Pattern.
+    /// </summary>
+    public class Demo:IDemo
     {
         public string Name => "Command pattern";
+        /// <summary>
+        /// Entry point into console application.
+        /// </summary>
         public void Run()
         {
-            var bedroomLight = new Light();
-            var kitchenLight = new Light();
-            var toggleCommand = new ToggleCommand(bedroomLight);
-            var lightSwitch = new Switch(toggleCommand);
+            // Create receiver, command, and invoker
+            var receiver = new Receiver();
+            var command = new ConcreteCommand(receiver);
+            var invoker = new Invoker();
 
-            lightSwitch.ExecuteCommand();
-            lightSwitch.ExecuteCommand();
-
-            var lights = new List<Light>{
-                kitchenLight,
-                bedroomLight
-            };
-            var allLightsCommand = new AllLightsCommand(lights);
-            lightSwitch = new Switch(allLightsCommand);
-            lightSwitch.ExecuteCommand();
+            // Set and execute command
+            invoker.SetCommand(command);
+            invoker.ExecuteCommand();
         }
     }
 }

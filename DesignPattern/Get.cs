@@ -4,16 +4,23 @@ using System.Linq;
 
 namespace DesignPattern
 {
+    public static class Get<T> where T : class
+    {
+        public static IEnumerable<T> All(string patternNamespace) =>
+              AppDomain.CurrentDomain.GetAssemblies().ToList()
+              .SelectMany(a => a.GetTypes())
+              .Where(t => typeof(T).IsAssignableFrom(t))
+              .Where(t => t.IsClass)
+              .Where(t => t.Namespace.Contains(patternNamespace))
+              .OrderBy(t => t.Namespace)
+              .Select(t => (T)System.Activator.CreateInstance(t));
+    }
     public static class Get
     {
         public static IEnumerable<IDemo> All(string patternNamespace) =>
-            AppDomain.CurrentDomain.GetAssemblies().ToList()
-            .SelectMany(a => a.GetTypes())
-            .Where(t => typeof(IDemo).IsAssignableFrom(t))
-            .Where(t => t.IsClass)
-            .Where(t => t.Namespace.Contains(patternNamespace))
-            .OrderBy(t => t.Namespace)
-            .Select(t => (IDemo)System.Activator.CreateInstance(t));
+            Get<IDemo>.All(patternNamespace);
+        public static IEnumerable<ISample> AllSample(string patternNamespace) =>
+          Get<ISample>.All(patternNamespace);
 
         public static void Run(this IEnumerable<IDemo> list)
         {

@@ -1,28 +1,32 @@
-﻿using System;
-
-namespace DesignPattern.Behavioral.ChainOfResponsibility
+﻿namespace DesignPattern.Behavioral.ChainOfResponsibility
 {
-    public class Demo: IDemo
+    /// <summary>
+    /// MainApp startup class for Structural
+    /// Chain of Responsibility Design Pattern.
+    /// </summary>
+    public class Demo:IDemo
     {
         public string Name => "Chain of responsibility pattern";
 
+        /// <summary>
+        /// Entry point into console application.
+        /// </summary>
         public void Run()
         {
-            Director bryan = new Director();
-            VP crystal = new VP();
-            CEO jeff = new CEO();
+            // Setup Chain of Responsibility
+            var h1 = new ConcreteHandler1();
+            var h2 = new ConcreteHandler2();
+            var h3 = new ConcreteHandler3();
+            h1.SetSuccessor(h2);
+            h2.SetSuccessor(h3);
 
-            bryan.setSuccessor(crystal);
-            crystal.setSuccessor(jeff);
+            // Generate and process request
+            int[] requests = { 2, 5, 14, 22, 18, 3, 27, 20 };
 
-            Request request = new Request(RequestType.CONFERENCE, 500);
-            bryan.handleRequest(request);
-
-            request = new Request(RequestType.PURCHASE, 1000);
-            crystal.handleRequest(request);
-
-            request = new Request(RequestType.PURCHASE, 2000);
-            bryan.handleRequest(request);
+            foreach (int request in requests)
+            {
+                h1.HandleRequest(request);
+            }
         }
     }
 }
