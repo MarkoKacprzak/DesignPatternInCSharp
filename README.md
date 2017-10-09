@@ -69,7 +69,7 @@ Umożliwienie zdefiniowanie nowej operacji dla hierarchii bez konieczności zmia
 <img src="ChainOfResponsibility.png"><br>
 <b>Command:</b>
 <br>
-<img src="Interpreter.png"><br>
+<img src="Command.png"><br>
 <b>Interpreter:</b>
 <br>
 <img src="Interpreter.png"><br>
