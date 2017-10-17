@@ -10,11 +10,11 @@ namespace DesignPattern.Mix.Family.TextDemo
 
             var dad =
                 new FamilyMember(
-                    new Bearded("Dad",
+                    new Bearded(
                         new Emotional("Dad", "hoho")));
             var mom =
                 new FamilyMember(
-                    new Hairy("Mom",
+                    new Hairy(
                         new Emotional("Mom", "hihi")));
             var boy =
                 new FamilyMember(
@@ -24,12 +24,12 @@ namespace DesignPattern.Mix.Family.TextDemo
                     new Emotional("Dog", "tail waving"));
             var uncle =
                 new FamilyMember(
-                    new Bearded("Uncle",
+                    new Bearded(
                         new Hairy("Uncle")));
             var granddad =
                 new FamilyMember(
-                    new Bearded("Granddad",
-                        new Hairy("Granddad",
+                    new Bearded(
+                        new Hairy(
                             new Emotional("Granddad", "oyoyo"))));
 
             var family = new Family(new FamilyMember[] { dad, mom, boy, dog, uncle, granddad });

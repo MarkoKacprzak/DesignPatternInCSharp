@@ -4,14 +4,21 @@
     {
 
         protected readonly ChainElement next;
+        public string Owner { get; protected set; }
 
         private static ChainElement nullValue;
 
         public ChainElement(ChainElement next)
         {
             this.next = next;
+            Owner = next.Owner;
         }
-
+        public ChainElement(string owner, ChainElement next)
+        {
+            Owner = owner;
+            this.next = next;
+            this.next.Owner = owner;
+        }
         protected ChainElement() { }
 
         public virtual T As<T>(T defaultValue) where T : class

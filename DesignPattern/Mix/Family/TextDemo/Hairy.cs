@@ -6,23 +6,23 @@ namespace DesignPattern.Mix.Family.TextDemo
     public class Hairy : ChainElement, IHairy
     {
 
-        private readonly string owner;
-
-        public Hairy(string owner, ChainElement next) : base(next) 
+        public Hairy(string owner, ChainElement next) : base(owner, next) 
         {
-            this.owner = owner;
+        }
+        public Hairy(ChainElement next) : base(next)
+        {
         }
         public Hairy(string owner) : this(owner, NullValue)
         {
         }
         public void GrowHair()
         {
-            Console.WriteLine("{0}: hair gets long", this.owner);
+            Console.WriteLine("{0}: hair gets long", this.Owner);
         }
 
         public void CutHair()
         {
-            Console.WriteLine("{0}: visited the hair dresser", this.owner);
+            Console.WriteLine("{0}: visited the hair dresser", this.Owner);
         }
     }
 }
