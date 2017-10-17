@@ -7,6 +7,10 @@
     {
         private ProductA2 ProductA;
         private ProductB2 ProductB;
+
+        public ProductA2 ProductA1 { get => ProductA; set => ProductA = value; }
+        public ProductB2 ProductB1 { get => ProductB; set => ProductB = value; }
+
         public override AbstractProductA CreateProductA()
         {
             return new ProductA2();

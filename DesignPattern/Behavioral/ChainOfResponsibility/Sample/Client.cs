@@ -3,5 +3,7 @@
     public class Client
     {
         private Handler handler;
+
+        public Handler Handler { get => handler; set => handler = value; }
     }
 }

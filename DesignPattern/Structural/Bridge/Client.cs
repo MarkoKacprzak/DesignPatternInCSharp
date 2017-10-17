@@ -9,5 +9,7 @@ namespace DesignPattern.Structural.Bridge
     public class Client
     {
         private Abstraction abstraction;
+
+        public Abstraction Abstraction { get => abstraction; set => abstraction = value; }
     }
 }

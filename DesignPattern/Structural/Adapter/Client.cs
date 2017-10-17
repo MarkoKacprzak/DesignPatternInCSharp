@@ -2,6 +2,8 @@
 {
     public abstract class Client
     {
-        private Target target;        
+        private Target target;
+
+        public Target Target { get => target; set => target = value; }
     }
 }

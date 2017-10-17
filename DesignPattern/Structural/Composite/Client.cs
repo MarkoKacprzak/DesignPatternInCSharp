@@ -7,5 +7,7 @@ namespace DesignPattern.Structural.Composite
     public class Client
     {
         Component component;
+
+        public Component Component { get => component; set => component = value; }
     }
 }

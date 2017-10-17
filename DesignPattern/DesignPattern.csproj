@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>DesignPattern</RootNamespace>
     <AssemblyName>DesignPattern</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -255,6 +256,20 @@
     <Compile Include="Get.cs" />
     <Compile Include="IDemo.cs" />
     <Compile Include="ISample.cs" />
+    <Compile Include="Mix\Family\TextDemo\Bearded.cs" />
+    <Compile Include="Mix\Family\Common\ChainElement.cs" />
+    <Compile Include="Mix\Family\Common\IBearded.cs" />
+    <Compile Include="Mix\Family\Common\IEmotional.cs" />
+    <Compile Include="Mix\Family\Common\IHairy.cs" />
+    <Compile Include="Mix\Family\Common\NullBearded.cs" />
+    <Compile Include="Mix\Family\Common\NullChainElement.cs" />
+    <Compile Include="Mix\Family\Common\NullEmotional.cs" />
+    <Compile Include="Mix\Family\Common\NullHairy.cs" />
+    <Compile Include="Mix\Family\TextDemo\Emotional.cs" />
+    <Compile Include="Mix\Family\TextDemo\Family.cs" />
+    <Compile Include="Mix\Family\TextDemo\FamilyMember.cs" />
+    <Compile Include="Mix\Family\TextDemo\Hairy.cs" />
+    <Compile Include="Mix\Family\TextDemo\Program.cs" />
     <Compile Include="Mix\House\LandOwner.cs" />
     <Compile Include="Mix\House\Painter.cs" />
     <Compile Include="Mix\House\PainterComponent.cs" />
@@ -322,6 +337,7 @@
     <Compile Include="Structural\Proxy\Subject.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Mix\Reservation\VacationDiagram.cd" />
     <None Include="Mix\House\ClassDiagram.cd" />
     <None Include="packages.config" />
