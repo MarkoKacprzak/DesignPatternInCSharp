@@ -15,6 +15,7 @@
             //Creational.Patterns.All.Run();
             Get.Sample("Behavioral");
             Get.Sample("Creational");
+            Mix.Houses.Program.Run();
         }
     }
 }

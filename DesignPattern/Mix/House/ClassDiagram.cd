@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Composite and Strategy Pattern">
+    <Position X="3.521" Y="0.5" Height="0.344" Width="2.106" />
+  </Comment>
+  <Class Name="DesignPattern.Mix.Houses.PainterComponent">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Mix\House\PainterComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Mix.Houses.Painter">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAGAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Mix\House\Painter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Mix.Houses.PaintingComposite">
+    <Position X="2.25" Y="2.25" Width="1.75" />
+    <AssociationLine Name="painter" Type="DesignPattern.Mix.Houses.PainterComponent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="2.25" />
+        <Point X="3.5" Y="1.148" />
+        <Point X="2.75" Y="1.148" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="scheduler" Type="DesignPattern.Mix.Houses.PaintingScheduler" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.5" />
+        <Point X="4.24" Y="2.5" />
+        <Point X="4.24" Y="1.118" />
+        <Point X="5.75" Y="1.118" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAACAABAAAAAAAAIAAI=</HashCode>
+      <FileName>Mix\House\PaintingCompany.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scheduler" />
+      <Property Name="painter" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Mix.Houses.PaintingScheduler">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\House\PaintingScheduler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Mix.Houses.ProportionalScheduler">
+    <Position X="6.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Mix\House\ProportionalScheduler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.Mix.Houses.WholeHouseScheduler">
+    <Position X="4.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Mix\House\WholeHouseScheduler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -243,6 +243,14 @@
     <Compile Include="Get.cs" />
     <Compile Include="IDemo.cs" />
     <Compile Include="ISample.cs" />
+    <Compile Include="Mix\House\LandOwner.cs" />
+    <Compile Include="Mix\House\Painter.cs" />
+    <Compile Include="Mix\House\PainterComponent.cs" />
+    <Compile Include="Mix\House\PaintingCompany.cs" />
+    <Compile Include="Mix\House\PaintingScheduler.cs" />
+    <Compile Include="Mix\House\Program.cs" />
+    <Compile Include="Mix\House\ProportionalScheduler.cs" />
+    <Compile Include="Mix\House\WholeHouseScheduler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structural\Adapter\Adaptee.cs" />
@@ -287,6 +295,7 @@
     <Compile Include="Structural\Proxy\Subject.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Mix\House\ClassDiagram.cd" />
     <None Include="UML\Creational\Singleton.cd" />
     <None Include="UML\Creational\Prototype.cd" />
     <None Include="UML\Creational\FactoryMethod.cd" />
