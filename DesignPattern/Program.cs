@@ -16,6 +16,7 @@
             Get.Sample("Behavioral");
             Get.Sample("Creational");
             Mix.Houses.Program.Run();
+            Mix.Reservations.Program.Run();
         }
     }
 }

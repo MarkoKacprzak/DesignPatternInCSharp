@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Mix.Reservations.AirplaneService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\AirplaneService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.Application" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Mix\Reservation\Application.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="partFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.HotelSelector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\HotelSelector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.HotelService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\HotelService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.VacationPartFactory" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="airplaneService" Type="DesignPattern.Mix.Reservations.IAirplaneService" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.188" />
+        <Point X="1.312" Y="3.188" />
+        <Point X="1.312" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="hotelSelector" Type="DesignPattern.Mix.Reservations.IHotelSelector" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.375" />
+        <Point X="3.156" Y="3.375" />
+        <Point X="3.156" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="hotelService" Type="DesignPattern.Mix.Reservations.IHotelService" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.625" />
+        <Point X="4.938" Y="3.625" />
+        <Point X="4.938" Y="3.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.055" Y="0.152" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAgCAAAAAAAEIAAAAAoAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\VacationPartFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="airplaneService" />
+      <Field Name="hotelSelector" />
+      <Field Name="hotelService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.VacationSpecificationBuilder">
+    <Position X="8.5" Y="2.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="partFactory" Type="DesignPattern.Mix.Reservations.IVacationPartFactory">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.43" Y="0.245" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>YAAAAAAgAAIAEAAAAAAAAgAAAAEgCAEABAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\VacationSpecificationBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="partFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPattern.Mix.Reservations.VacationSpecification">
+    <Position X="10.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\VacationSpecification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="part" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="DesignPattern.Mix.Reservations.IAirplaneService" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\IAirplaneService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Reservations.IHotelSelector" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\IHotelSelector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Reservations.IHotelService" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\IHotelService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Reservations.IVacationPart">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\IVacationPart.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Reservations.IVacationPartFactory">
+    <Position X="6.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAAAAAAAoAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Reservation\IVacationPartFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
