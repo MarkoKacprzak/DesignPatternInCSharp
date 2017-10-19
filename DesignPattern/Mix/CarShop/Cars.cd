@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DesignPattern.Mix.CarShop.Car">
-    <Position X="4.75" Y="0.75" Width="1.5" />
+    <Position X="5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAABAgAAAIAAAA=</HashCode>
+      <HashCode>AoAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQIAAA=</HashCode>
       <FileName>Mix\CarShop\Car.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Engine" />
-      <Property Name="Seat" />
+      <Field Name="engine" />
+      <Field Name="seats" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Mix.CarShop.CarRepository">
-    <Position X="7" Y="2.75" Width="1.5" />
+    <Position X="7.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Mix\CarShop\CarRepository.cs</FileName>
@@ -22,28 +22,50 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Mix.CarShop.CarsView">
-    <Position X="7" Y="0.75" Width="1.5" />
+    <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Mix\CarShop\CarsView.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Car" />
+      <Field Name="cars" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DesignPattern.Mix.CarShop.Engine">
-    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAAAAAAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Mix\CarShop\Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesignPattern.Mix.CarShop.Seat">
-    <Position X="2.5" Y="1.5" Width="1.5" />
+    <Position X="2.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AIAAgAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Mix\CarShop\Seat.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DesignPattern.Mix.CarShop.CarToStringVisitor">
+    <Position X="9.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAAAAAQAAAAAAQAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\CarShop\CarToStringVisitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DesignPattern.Mix.CarShop.ICarPartVisitor" Collapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\CarShop\ICarPartVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.CarShop.ICarVisitor">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\CarShop\ICarVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

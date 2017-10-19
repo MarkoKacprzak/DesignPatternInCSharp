@@ -259,7 +259,10 @@
     <Compile Include="Mix\CarShop\Car.cs" />
     <Compile Include="Mix\CarShop\CarRepository.cs" />
     <Compile Include="Mix\CarShop\CarsView.cs" />
+    <Compile Include="Mix\CarShop\CarToStringVisitor.cs" />
     <Compile Include="Mix\CarShop\Engine.cs" />
+    <Compile Include="Mix\CarShop\ICarPartVisitor.cs" />
+    <Compile Include="Mix\CarShop\ICarVisitor.cs" />
     <Compile Include="Mix\CarShop\Program.cs" />
     <Compile Include="Mix\CarShop\Seat.cs" />
     <Compile Include="Mix\Family\TextDemo\Bearded.cs" />

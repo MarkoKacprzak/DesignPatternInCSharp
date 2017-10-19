@@ -13,7 +13,10 @@ namespace DesignPattern.Mix.CarShop
             this.Name = name;
             this.Capacity = capacity;
         }
-
+        public void Accept(ICarPartVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
         public static IEnumerable<Seat> FourSeatConfiguration
         {
             get

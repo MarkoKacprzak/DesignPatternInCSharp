@@ -11,5 +11,9 @@
             this.Power = power;
             this.CylinderVolume = cylinderVolume;
         }
+        public void Accept(ICarPartVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
     }
 }
