@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DesignPattern.Mix.CarShop
@@ -18,12 +19,19 @@ namespace DesignPattern.Mix.CarShop
             this.seats = new List<Seat>(seats).ToArray();
         }
 
-        public void Accept(ICarVisitor visitor)
+        public void Accept(Func<ICarVisitor> visitorFactory)
         {
-            visitor.Visit(make, model);
-            this.engine.Accept(visitor);
+            ICarVisitor visitor = visitorFactory();
+            engine.Accept(()=>visitor);
             foreach (Seat seat in seats)
-                seat.Accept(visitor);
+                seat.Accept(()=>visitor);
+            visitor.VisitCar(make, model);
+        }
+        public T Accept<T>(Func<ICarVisitor<T>> visitorFactory)
+        {
+            ICarVisitor<T> visitor = visitorFactory();
+            Accept(() => (ICarVisitor)visitor);
+            return visitor.ProduceResult();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DesignPattern.Mix.CarShop
 {
@@ -13,9 +14,9 @@ namespace DesignPattern.Mix.CarShop
             this.name = name;
             this.capacity = capacity;
         }
-        public void Accept(ICarPartVisitor visitor)
+        public void Accept(Func<ICarPartVisitor> visitorFactory)
         {
-            visitor.VisitSeat(name, capacity);
+            visitorFactory().VisitSeat(name, capacity);
         }
         public static IEnumerable<Seat> FourSeatConfiguration
         {

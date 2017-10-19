@@ -1,12 +1,12 @@
 ﻿namespace DesignPattern.Mix.CarShop
 {
-    class CarToStringVisitor: ICarVisitor
+    class CarToStringVisitor: ICarVisitor<string>
     {
         private string carDetails;
         private string engineDetails;
         private int seatsCount;
 
-        public void Visit(string make, string model)
+        public void VisitCar(string make, string model)
         {
             carDetails = $"{make} {model}";
         }
@@ -23,7 +23,7 @@
             seatsCount +=capacity;
         }
 
-        public string GetCarDescription()
+        public string ProduceResult()
         {
             return $"{carDetails} {engineDetails} {seatsCount} seat(s)";
         }

@@ -16,9 +16,9 @@ namespace DesignPattern.Mix.CarShop
             this.power = power;
             this.cylinderVolume = cylinderVolume;
         }
-        public void Accept(ICarPartVisitor visitor)
+        public void Accept(Func<ICarPartVisitor> visitorFactory)
         {
-            visitor.VisitEngine(power, cylinderVolume, temperatureC);
+            visitorFactory().VisitEngine(power, cylinderVolume, temperatureC);
         }
         public void Run(TimeSpan time)
         {

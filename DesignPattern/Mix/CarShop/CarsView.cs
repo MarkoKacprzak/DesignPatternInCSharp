@@ -17,9 +17,8 @@ namespace DesignPattern.Mix.CarShop
         {
             foreach (Car car in this.cars)
             {
-                CarToStringVisitor converter = new CarToStringVisitor();
-                car.Accept(converter);
-                Console.WriteLine(converter.GetCarDescription());
+                var report=car.Accept(()=>new CarToStringVisitor());
+                Console.WriteLine(report);
             }
         }
     }
