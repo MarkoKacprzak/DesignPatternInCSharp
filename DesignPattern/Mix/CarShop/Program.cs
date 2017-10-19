@@ -8,19 +8,17 @@ namespace DesignPattern.Mix.CarShop
     {
         public static void Run()
         {
+            var cars = new CarRepository().GetAll();
 
-           var cars = new CarRepository().GetAll();
-
-            cars.ToList()
-                .ForEach(car => car.Accept(
-                    () => new SaveCarVisitor()));
+            cars.ToList().ForEach(car => car.Accept(() => new SaveCarVisitor()));
 
             var view = new CarsView(cars);
             view.Render();
 
+            cars.ToList().ForEach(car => Console.WriteLine(car.Register()));
+
             Console.Write("Press ENTER to exit...");
             Console.ReadLine();
-
         }
     }
 }

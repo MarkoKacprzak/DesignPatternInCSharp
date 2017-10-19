@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPattern.Mix.CarShop.POCO;
+using System;
 
 namespace DesignPattern.Mix.CarShop
 {
@@ -18,7 +19,9 @@ namespace DesignPattern.Mix.CarShop
         }
         public void Accept(Func<ICarPartVisitor> visitorFactory)
         {
-            visitorFactory().VisitEngine(power, cylinderVolume, temperatureC);
+            var structure = new EngineStructure(this.power, this.cylinderVolume);
+            var status = new EngineStatus(this.temperatureC, 0);
+            visitorFactory().VisitEngine(structure, status);
         }
         public void Run(TimeSpan time)
         {

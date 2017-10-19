@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPattern.Mix.CarShop.POCO;
+using System;
 using System.Collections.Generic;
 
 namespace DesignPattern.Mix.CarShop
@@ -17,27 +18,27 @@ namespace DesignPattern.Mix.CarShop
         {
             this.make = make;
             this.model = model;
-            this.ProcessQueue();
+            ProcessQueue();
         }
 
-        public void VisitEngine(float power, float cylinderVolume, float temperatureC)
+        public void VisitEngine(EngineStructure structure, EngineStatus status)
         {
-            this.power = power;
-            this.cylinderVolume = cylinderVolume;
-            this.ProcessQueue();
+            power = structure.Power;
+            cylinderVolume = structure.CylinderVolume;
+            ProcessQueue();
         }
 
         public void VisitSeat(string name, int capacity)
         {
-            this.seats.Enqueue(Tuple.Create(name, capacity));
-            this.ProcessQueue();
+            seats.Enqueue(Tuple.Create(name, capacity));
+            ProcessQueue();
         }
 
         private void ProcessQueue()
         {
-            this.SaveCar();
-            this.SaveEngine();
-            this.SaveSeats();
+            SaveCar();
+            SaveEngine();
+            SaveSeats();
         }
 
         private void SaveCar()

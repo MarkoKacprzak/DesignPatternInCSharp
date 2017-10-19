@@ -1,8 +1,10 @@
-﻿namespace DesignPattern.Mix.CarShop
+﻿using DesignPattern.Mix.CarShop.POCO;
+
+namespace DesignPattern.Mix.CarShop
 {
     interface ICarPartVisitor
     {
-        void VisitEngine(float power, float cylinderVolume, float temperatureC);
+        void VisitEngine(EngineStructure structure, EngineStatus status);
         void VisitSeat(string name, int capacity);
     }
 }

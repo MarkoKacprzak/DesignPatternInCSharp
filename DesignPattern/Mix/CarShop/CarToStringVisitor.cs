@@ -1,4 +1,6 @@
-﻿namespace DesignPattern.Mix.CarShop
+﻿using DesignPattern.Mix.CarShop.POCO;
+
+namespace DesignPattern.Mix.CarShop
 {
     class CarToStringVisitor: ICarVisitor<string>
     {
@@ -11,12 +13,10 @@
             carDetails = $"{make} {model}";
         }
 
-        public void VisitEngine(float power, float cylinderVolume,
-                                 float temperatureC)
+        public void VisitEngine(EngineStructure structure, EngineStatus status)
         {
-            engineDetails = $"{cylinderVolume}cc {power}kW";
+            engineDetails = $"{structure.CylinderVolume}cc {structure.Power}kW";
         }
-
 
         public void VisitSeat(string name, int capacity)
         {

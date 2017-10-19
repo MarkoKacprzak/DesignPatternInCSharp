@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DesignPattern.Mix.CarShop
 {
-    class Car
+    class Car: ICar
     {
 
         private readonly string make;
@@ -32,6 +32,11 @@ namespace DesignPattern.Mix.CarShop
             ICarVisitor<T> visitor = visitorFactory();
             Accept(() => (ICarVisitor)visitor);
             return visitor.ProduceResult();
+        }
+
+        public CarRegistration Register()
+        {
+            return new CarRegistrationBuilder(this).ProduceResult();
         }
     }
 }
