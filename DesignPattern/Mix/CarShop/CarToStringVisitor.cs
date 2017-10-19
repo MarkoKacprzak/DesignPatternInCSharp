@@ -3,7 +3,7 @@
     class CarToStringVisitor: ICarVisitor
     {
         private string carDetails;
-        private string report;
+        private string engineDetails;
         private int seatsCount;
 
         public void Visit(string make, string model)
@@ -11,19 +11,21 @@
             carDetails = $"{make} {model}";
         }
 
-        public void Visit(Engine engine)
+        public void VisitEngine(float power, float cylinderVolume,
+                                 float temperatureC)
         {
-            report += $" {engine.CylinderVolume}cc {engine.Power}kW";
+            engineDetails = $"{cylinderVolume}cc {power}kW";
         }
 
-        public void Visit(Seat seat)
+
+        public void VisitSeat(string name, int capacity)
         {
-            seatsCount+=seat.Capacity;
+            seatsCount +=capacity;
         }
 
         public string GetCarDescription()
         {
-            return $"{carDetails} {report} {seatsCount} seat(s)";
+            return $"{carDetails} {engineDetails} {seatsCount} seat(s)";
         }
     }
 }

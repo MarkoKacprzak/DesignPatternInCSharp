@@ -2,7 +2,7 @@
 {
     interface ICarPartVisitor
     {
-        void Visit(Engine engine);
-        void Visit(Seat seat);
+        void VisitEngine(float power, float cylinderVolume, float temperatureC);
+        void VisitSeat(string name, int capacity);
     }
 }
