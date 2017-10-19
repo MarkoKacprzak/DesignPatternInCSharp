@@ -18,6 +18,7 @@
             Mix.Houses.Program.Run();
             Mix.Reservations.Program.Run();
             Mix.Family.TextDemo.Program.Run();
+            Mix.CarShop.Program.Run();
         }
     }
 }
