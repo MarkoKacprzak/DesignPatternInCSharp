@@ -257,6 +257,7 @@
     <Compile Include="IDemo.cs" />
     <Compile Include="ISample.cs" />
     <Compile Include="Mix\CarShop\Car.cs" />
+    <Compile Include="Mix\CarShop\CarPersistence.cs" />
     <Compile Include="Mix\CarShop\CarRepository.cs" />
     <Compile Include="Mix\CarShop\CarsView.cs" />
     <Compile Include="Mix\CarShop\CarToStringVisitor.cs" />
@@ -265,6 +266,7 @@
     <Compile Include="Mix\CarShop\ICarVisitor.cs" />
     <Compile Include="Mix\CarShop\ICarVisitorT.cs" />
     <Compile Include="Mix\CarShop\Program.cs" />
+    <Compile Include="Mix\CarShop\SaveCarVisitor.cs.cs" />
     <Compile Include="Mix\CarShop\Seat.cs" />
     <Compile Include="Mix\Family\TextDemo\Bearded.cs" />
     <Compile Include="Mix\Family\Common\ChainElement.cs" />

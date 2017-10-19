@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DesignPattern.Mix.CarShop
 {
@@ -9,6 +10,10 @@ namespace DesignPattern.Mix.CarShop
         {
 
            var cars = new CarRepository().GetAll();
+
+            cars.ToList()
+                .ForEach(car => car.Accept(
+                    () => new SaveCarVisitor()));
 
             var view = new CarsView(cars);
             view.Render();
