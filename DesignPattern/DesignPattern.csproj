@@ -259,8 +259,13 @@
     <Compile Include="Mix\Appointments\DataService.cs" />
     <Compile Include="Mix\Appointments\DomainService.cs" />
     <Compile Include="Mix\Appointments\IAppointment.cs" />
+    <Compile Include="Mix\Appointments\IRegistrant.cs" />
+    <Compile Include="Mix\Appointments\IRegistrantUser.cs" />
+    <Compile Include="Mix\Appointments\IRegistrationService.cs" />
     <Compile Include="Mix\Appointments\IUser.cs" />
+    <Compile Include="Mix\Appointments\IUserVisitor.cs" />
     <Compile Include="Mix\Appointments\Meeting.cs" />
+    <Compile Include="Mix\Appointments\PersistableUser.cs" />
     <Compile Include="Mix\Appointments\Program.cs" />
     <Compile Include="Mix\Appointments\User.cs" />
     <Compile Include="Mix\CarShop\Car.cs" />
@@ -362,6 +367,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Mix\Appointments\Appointment.cd" />
     <None Include="Mix\CarShop\Cars.cd" />
     <None Include="Mix\Reservation\VacationDiagram.cd" />
     <None Include="Mix\House\HousePainter.cd" />

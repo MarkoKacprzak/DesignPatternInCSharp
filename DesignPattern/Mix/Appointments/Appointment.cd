@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Mix.Appointments.User">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+      <Method Name="User" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.337" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Appointments.PersistableUser">
+    <Position X="1.75" Y="4.5" Width="1.75" />
+    <Members>
+      <Field Name="password" Hidden="true" />
+      <Method Name="PersistableUser" Hidden="true" />
+      <Field Name="registrationService" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+      <Field Name="user" Hidden="true" />
+      <Field Name="userName" Hidden="true" />
+      <Method Name="VisitUser" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAABAgAAEAAAAAAAAAAABAAAAQAAAAgEAAQA=</HashCode>
+      <FileName>Mix\Appointments\PersistableUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.234" />
+  </Class>
+  <Interface Name="DesignPattern.Mix.Appointments.IUser">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Appointments.IRegistrantUser" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\IRegistrantUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Appointments.IRegistrant">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\IRegistrant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

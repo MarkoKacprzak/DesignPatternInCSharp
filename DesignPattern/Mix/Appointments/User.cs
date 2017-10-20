@@ -4,21 +4,25 @@ namespace DesignPattern.Mix.Appointments
 {
     class User: IUser
     {
-        private string name;
-        private readonly string password;
-
-        public User(string name, string password)
+        private readonly string name;
+        
+        public User(string name)
         {
             this.name = name;
-            this.password = password;
         }
+
+        public void Accept(Func<IUserVisitor> visitorFactory)
+        {
+            visitorFactory().VisitUser(name);
+        }
+
         public IAppointment MakeAppointment(DateTime startTime)
         {
             return new Meeting(startTime, TimeSpan.FromHours(1));
         }
         public override string ToString()
         {
-            return $"User(name={name} password={password})";
+            return $"User(name={name})";
         }
     }
 }

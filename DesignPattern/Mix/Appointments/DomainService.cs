@@ -10,13 +10,20 @@
         }
         public IUser RegisterUser(string name, string password)
         {
-            dataService.RegisterUser(name, password);
-            return new User(name, password);
+            var user = CreateUser(name, password);
+            user.Register();
+            return user;
         }
         public IUser ChangePassword(string name, string password, string newPassword)
         {
-            dataService.ChangePassword(name, password, newPassword);
-            return new User(name, newPassword);
+            var user = this.CreateUser(name, password);
+            user.ChangePassword(newPassword);
+            return user;
+        }
+        private IRegistrantUser CreateUser(string name, string password)
+        {
+            IUser user = new User(name);
+            return new PersistableUser(user, this.dataService, password);
         }
     }
 }

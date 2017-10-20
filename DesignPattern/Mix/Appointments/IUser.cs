@@ -2,8 +2,9 @@
 
 namespace DesignPattern.Mix.Appointments
 {
-    internal interface IUser
+    interface IUser
     {
         IAppointment MakeAppointment(DateTime startTime);
+        void Accept(Func<IUserVisitor> visitorFactory);
     }
 }

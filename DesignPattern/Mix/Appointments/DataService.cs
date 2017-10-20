@@ -2,9 +2,9 @@
 
 namespace DesignPattern.Mix.Appointments
 {
-    class DataService
+    class DataService: IRegistrationService
     {
-        public void RegisterUser(string name, string password)
+        public void Register(string name, string password)
         {
             Console.WriteLine(
                 $"INSERT INTO User (UserName, Password)\n" +
