@@ -29,6 +29,38 @@
     </TypeIdentifier>
     <Lollipop Position="0.234" />
   </Class>
+  <Class Name="DesignPattern.Mix.Appointments.UserGroup">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <AssociationLine Name="members" Type="DesignPattern.Mix.Appointments.IUser" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.5" />
+        <Point X="7.125" Y="0.125" />
+        <Point X="1.875" Y="0.125" />
+        <Point X="1.875" Y="0.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\UserGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="members" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DesignPattern.Mix.Appointments.RegistrantGroup">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <Members>
+      <Field Name="group" Hidden="true" />
+      <Field Name="groupName" Hidden="true" />
+      <Field Name="password" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QIAAAQAAAABAgAAAAAAAAAAAAQABAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Mix\Appointments\RegistrantGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="DesignPattern.Mix.Appointments.IUser">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -37,7 +69,23 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="DesignPattern.Mix.Appointments.IRegistrantUser" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="3" Width="1.5" />
+    <InheritanceLine Type="DesignPattern.Mix.Appointments.IUser" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="1.796" />
+        <Point X="1.25" Y="2.171" />
+        <Point X="2.562" Y="2.171" />
+        <Point X="2.562" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="DesignPattern.Mix.Appointments.IRegistrant" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="1.796" />
+        <Point X="3" Y="2.171" />
+        <Point X="2.562" Y="2.171" />
+        <Point X="2.562" Y="3" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Mix\Appointments\IRegistrantUser.cs</FileName>
@@ -48,6 +96,28 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Mix\Appointments\IRegistrant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Appointments.IUserGroup">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\IUserGroup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPattern.Mix.Appointments.IRegistrantGroup" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <InheritanceLine Type="DesignPattern.Mix.Appointments.IRegistrant" FixedFromPoint="true">
+      <Path>
+        <Point X="3.375" Y="1.796" />
+        <Point X="3.375" Y="2.171" />
+        <Point X="4.75" Y="2.171" />
+        <Point X="4.75" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mix\Appointments\IRegistrantGroup.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
