@@ -13,7 +13,7 @@
     <Lollipop Position="0.337" />
   </Class>
   <Class Name="DesignPattern.Mix.Appointments.PersistableUser">
-    <Position X="1.75" Y="4.5" Width="1.75" />
+    <Position X="0.75" Y="4.75" Width="1.75" />
     <Members>
       <Field Name="password" Hidden="true" />
       <Method Name="PersistableUser" Hidden="true" />
@@ -49,7 +49,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DesignPattern.Mix.Appointments.RegistrantGroup">
-    <Position X="5" Y="4.5" Width="1.5" />
+    <Position X="5.5" Y="4.25" Width="1.5" />
     <Members>
       <Field Name="group" Hidden="true" />
       <Field Name="groupName" Hidden="true" />
