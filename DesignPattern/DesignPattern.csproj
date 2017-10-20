@@ -263,6 +263,7 @@
     <Compile Include="Mix\Appointments\IRegistrantUser.cs" />
     <Compile Include="Mix\Appointments\IRegistrationService.cs" />
     <Compile Include="Mix\Appointments\IUser.cs" />
+    <Compile Include="Mix\Appointments\IUserFactory.cs" />
     <Compile Include="Mix\Appointments\IUserVisitor.cs" />
     <Compile Include="Mix\Appointments\Meeting.cs" />
     <Compile Include="Mix\Appointments\PersistableUser.cs" />

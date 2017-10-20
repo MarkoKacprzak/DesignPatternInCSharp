@@ -8,7 +8,8 @@ namespace DesignPattern.Mix.Appointments
         {
             DomainService domain =
                 new DomainService(
-                    new DataService());
+                    new UserFactory(
+                        new DataService()));
             IUser user = domain.RegisterUser("Marek", "password");
             Console.WriteLine($"{user}\n");
 
