@@ -20,6 +20,7 @@
             Mix.Family.TextDemo.Program.Run();
             Mix.CarShop.Program.Run();
             Mix.Appointments.Program.Run();
+            Mix.CalculateControlDigit.Program.Run();
         }
     }
 }
