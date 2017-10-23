@@ -47,17 +47,17 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
         public IEnumerable<StockItem> GetAvailableItems() =>
             productRepository.GetAll().Select(product => new StockItem(product.Name, product.Price));
 
-        public Receipt Purchase(string username, string itemName)
+        public IPurchaseReport Purchase(string username, string itemName)
         { 
             var product = productRepository.Find(itemName);
 
             if (product == null)
-                return null;
+                return FailedPurchase.Instance;
 
             var user = userRepository.Find(username);
 
             if (user == null)
-                return null;
+                return FailedPurchase.Instance;
 
             return user.Purchase(product);
         }

@@ -21,12 +21,12 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
         public decimal Balance => account.Balance;
 
-        public Receipt Purchase(IProduct product)
+        public IPurchaseReport Purchase(IProduct product)
         {
             var transaction = account.Withdraw(product.Price);
 
             if (transaction == null)
-                return null;
+                return FailedPurchase.Instance;
 
             return new Receipt(product.Name, product.Price);
         }

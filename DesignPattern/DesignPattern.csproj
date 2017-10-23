@@ -336,8 +336,10 @@
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\RegisterCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\MenuItem.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\UserInterface.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Interfaces\FailedPurchase.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\ICommand.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Interfaces\IPurchaseReport.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IUserInterface.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\Receipt.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\StockItem.cs" />

@@ -71,10 +71,10 @@ namespace DesignPattern.Mix.NTierApp.Application.Implementation
 
         public IEnumerable<StockItem> GetAvailableItems() => domainServices.GetAvailableItems();
 
-        public Receipt Purchase(string itemName)
+        public IPurchaseReport Purchase(string itemName)
         { 
             if (!IsUserLoggedIn)
-                return null;
+                return FailedPurchase.Instance;
             
             return domainServices.Purchase(this.loggedInUsername, itemName);
         }
