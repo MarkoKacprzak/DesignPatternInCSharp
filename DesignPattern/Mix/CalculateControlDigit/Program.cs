@@ -9,21 +9,15 @@ namespace DesignPattern.Mix.CalculateControlDigit
         {
 
             int sum = 0;
-            int pos = 1;
+            int factor = 1;
 
             do
             {
 
                 int digit = (int)(number % 10);
-
-                if (pos % 2 ==0)
-                    sum += 3 * digit;
-                else
-                    sum += digit;
-
+                sum += factor * digit;
+                factor = 4 - factor;
                 number /= 10;
-                pos++;
-
             }
             while (number > 0);
 
