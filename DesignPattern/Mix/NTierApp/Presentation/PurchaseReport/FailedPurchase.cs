@@ -1,6 +1,8 @@
-﻿namespace DesignPattern.Mix.NTierApp.Presentation.Interfaces
+﻿using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
+
+namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    internal class FailedPurchase : IPurchaseReport
+    class FailedPurchase : IPurchaseReport
     {
         private static FailedPurchase instance;
         private FailedPurchase()

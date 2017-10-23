@@ -11,17 +11,20 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
         private readonly IUserRepository userRepository;
         private readonly IProductRepository productRepository;
+        private readonly IPurchaseReportFactory purchaseReportFactory;
 
-        public DomainServices(IUserRepository userRepository, IProductRepository productRepository)
+        public DomainServices(IUserRepository userRepository, IProductRepository productRepository,
+            IPurchaseReportFactory purchaseReportFactory)
         {
             this.userRepository = userRepository;
             this.productRepository = productRepository;
+            this.purchaseReportFactory = purchaseReportFactory;
         }
 
         public void CreateUser(string username)
         {
             var userAccount = new Account();
-            var user = new User(username, userAccount);
+            var user = new User(username, userAccount, purchaseReportFactory);
 
             userRepository.Add(user);
         }
@@ -52,12 +55,12 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
             var product = productRepository.Find(itemName);
 
             if (product == null)
-                return FailedPurchase.Instance;
+                return purchaseReportFactory.CreateProductNotFound(username, itemName);
 
             var user = userRepository.Find(username);
 
             if (user == null)
-                return FailedPurchase.Instance;
+                return purchaseReportFactory.CreateNotRegistered(username);
 
             return user.Purchase(product);
         }

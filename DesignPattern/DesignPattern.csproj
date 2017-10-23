@@ -336,12 +336,18 @@
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\RegisterCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\MenuItem.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\UserInterface.cs" />
-    <Compile Include="Mix\NTierApp\Presentation\Interfaces\FailedPurchase.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Interfaces\IPurchaseReportFactory.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\FailedPurchase.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\ICommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IPurchaseReport.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IUserInterface.cs" />
-    <Compile Include="Mix\NTierApp\Presentation\Interfaces\Receipt.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\NotEnoughtMoney.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\NotRegistered.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\NotSignedIn.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\ProductNotFound.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\PurchaseReportFactory.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\Receipt.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\StockItem.cs" />
     <Compile Include="Mix\NTierApp\Program.cs" />
     <Compile Include="Mix\Reservation\AirplaneService.cs" />
@@ -433,6 +439,14 @@
     <None Include="UML\Behavioral\Interpreter.cd" />
     <None Include="UML\Behavioral\Command.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Mix\NTierApp\AbstractFactoryLayers.PNG" />
+    <Content Include="Mix\NTierApp\Application.PNG" />
+    <Content Include="Mix\NTierApp\ApplicationFlow.PNG" />
+    <Content Include="Mix\NTierApp\DependOnAbstractions.PNG" />
+    <Content Include="Mix\NTierApp\SpecialCasePattern.PNG" />
+    <Content Include="Mix\NTierApp\ToComplexPresentationLayer.PNG" />
+    <Content Include="Mix\NTierApp\WhereToPlace.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

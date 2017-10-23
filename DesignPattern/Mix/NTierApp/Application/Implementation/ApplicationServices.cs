@@ -10,11 +10,14 @@ namespace DesignPattern.Mix.NTierApp.Application.Implementation
 
         private readonly IDomainServices domainServices;
         private string loggedInUsername;
+        private readonly IPurchaseReportFactory reportFactory;
 
-        public ApplicationServices(IDomainServices domainServices)
+        public ApplicationServices(IDomainServices domainServices,
+            IPurchaseReportFactory reportFactory)
         {
             this.domainServices = domainServices;
             this.loggedInUsername = string.Empty;
+            this.reportFactory = reportFactory;
         }
 
         public void RegisterUser(string username)
@@ -74,7 +77,7 @@ namespace DesignPattern.Mix.NTierApp.Application.Implementation
         public IPurchaseReport Purchase(string itemName)
         { 
             if (!IsUserLoggedIn)
-                return FailedPurchase.Instance;
+                return reportFactory.CreateNotSignedIn();
             
             return domainServices.Purchase(this.loggedInUsername, itemName);
         }

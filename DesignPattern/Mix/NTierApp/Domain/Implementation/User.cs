@@ -1,5 +1,6 @@
 ﻿using DesignPattern.Mix.NTierApp.Domain.Interfaces;
 using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
+using DesignPattern.Mix.NTierApp.Presentation.PurchaseReport;
 
 namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 {
@@ -7,11 +8,14 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
     {
         public string Username { get; private set; }
         private readonly IAccount account;
+        private readonly IPurchaseReportFactory purchaseReportFactory;
 
-        public User(string username, IAccount account)
+        public User(string username, IAccount account,
+            IPurchaseReportFactory purchaseReportFactory)
         {
             Username = username;
             this.account = account;
+            this.purchaseReportFactory = purchaseReportFactory;
         }
 
         public void Deposit(decimal amount)
@@ -26,9 +30,9 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
             var transaction = account.Withdraw(product.Price);
 
             if (transaction == null)
-                return FailedPurchase.Instance;
+                return purchaseReportFactory.CreateNotEnoughMoney(Username, product.Name, product.Price);
 
-            return new Receipt(product.Name, product.Price);
+            return new Receipt(Username, product.Name, product.Price);
         }
     }
 }
