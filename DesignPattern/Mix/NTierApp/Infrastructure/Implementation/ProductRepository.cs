@@ -1,4 +1,5 @@
-﻿using DesignPattern.Mix.NTierApp.Domain.Interfaces;
+﻿using DesignPattern.Mix.NTierApp.Common;
+using DesignPattern.Mix.NTierApp.Domain.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,11 +25,11 @@ namespace DesignPattern.Mix.NTierApp.Infrastructure.Implementation
             return nameToPrice.Select(pair => new ProductData(pair.Key, pair.Value));
         }
 
-        public IEnumerable<IProduct> Find(string name)
+        public Option<IProduct> TryFind(string name)
         {
             if (nameToPrice.TryGetValue(name, out decimal price))
-                return new IProduct[] { new ProductData(name, price) };
-            return new IProduct[0];
+                return Option<IProduct>.Create(new ProductData(name, price));
+            return Option<IProduct>.CreateEmpty();
         }
     }
 }

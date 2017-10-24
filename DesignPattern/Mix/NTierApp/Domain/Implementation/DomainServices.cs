@@ -51,7 +51,7 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
         public IPurchaseReport Purchase(string username, string itemName)
             => productRepository
-            .Find(itemName)
+            .TryFind(itemName)
             .Select(product => Purchase(username, product))
             .DefaultIfEmpty(purchaseReportFactory.CreateProductNotFound(username, itemName))
             .Single();

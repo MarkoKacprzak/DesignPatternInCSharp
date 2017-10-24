@@ -322,6 +322,7 @@
     <Compile Include="Mix\NTierApp\Application\Implementation\ApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Application\Interfaces\IDomainServices.cs" />
     <Compile Include="Mix\NTierApp\Common\IEnumerableExtensions.cs" />
+    <Compile Include="Mix\NTierApp\Common\Option.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\Account.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\DomainServices.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\User.cs" />
@@ -450,6 +451,8 @@
     <Content Include="Mix\NTierApp\Application.PNG" />
     <Content Include="Mix\NTierApp\ApplicationFlow.PNG" />
     <Content Include="Mix\NTierApp\DependOnAbstractions.PNG" />
+    <Content Include="Mix\NTierApp\mapreduce.PNG" />
+    <Content Include="Mix\NTierApp\refactoring.PNG" />
     <Content Include="Mix\NTierApp\SpecialCasePattern.PNG" />
     <Content Include="Mix\NTierApp\ToComplexPresentationLayer.PNG" />
     <Content Include="Mix\NTierApp\WhereToPlace.PNG" />
