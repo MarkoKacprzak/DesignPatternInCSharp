@@ -31,26 +31,40 @@ namespace DesignPattern.Mix.CalculateControlDigit
         }
         static int CalculateControlDigitOptimization(long number)
         {
-
-            int sum = 0;
-
-            var factors = GetMultiplicativeFactors().GetEnumerator();
-            var weightedDigits = new List<int>();
-            foreach (var digit in GetDigitsFromSignificant(number))
-            {
-                factors.MoveNext();
-                weightedDigits.Add(factors.Current * digit);
-            }
-            foreach(int weightedDigit in weightedDigits)
-            {
-                sum += weightedDigit;
-            }
+            var digits = GetDigitsFromSignificant(number);
+            var factors = GetMultiplicativeFactors();
+            var weightedDigits = AddWeight(factors, digits);
+            int sum = Sum(weightedDigits);
             int result = sum % 11;
             if (result == 10)
                 result = 1;
 
             return result;
 
+        }
+
+        private static int Sum(IEnumerable<int> weightedDigits)
+        {
+            int sum = 0;
+            foreach (int weightedDigit in weightedDigits)
+            {
+                sum += weightedDigit;
+            }
+
+            return sum;
+        }
+
+        private static IEnumerable<int> AddWeight(
+            IEnumerable<int> values, IEnumerable<int> factors)
+        {
+            var factor = factors.GetEnumerator();
+            var weightedValues = new List<int>();
+            foreach (var digit in values)
+            {
+                factor.MoveNext();
+                weightedValues.Add(factor.Current * digit);
+            }
+            return weightedValues;
         }
 
         private static IEnumerable<int> GetMultiplicativeFactors()
