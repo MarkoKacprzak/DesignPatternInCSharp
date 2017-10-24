@@ -30,12 +30,22 @@ namespace DesignPattern.Mix.CalculateControlDigit
             return result;
 
         }
+        /// <summary>
+        /// CalculateControlDigit method works 
+        /// by taking the digits of the number starting with the least significant one, 
+        /// then adding weights to each of the digits while weights are numbers 1, 3, 1, 3 in turn.
+        /// Then it sums the weighted digits up and takes modulo 11 of the result.
+        /// If the modular result is 10, it is replaced with value 1. The result obtained in that way is returned as
+        /// the control digit
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         static int CalculateControlDigitOptimization(long number)
         {
             var sum = 
                 number
                 .GetDigitsFromSignificant()
-                .Zip(GetMultiplicativeFactors, (d, f) => d * f)
+                .AddWeights(GetMultiplicativeFactors)
                 .Sum();
             int result = sum % 11;
             if (result == 10)

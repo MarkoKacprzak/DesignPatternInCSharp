@@ -275,6 +275,7 @@
     <Compile Include="Mix\Appointments\User.cs" />
     <Compile Include="Mix\Appointments\UserGroup.cs" />
     <Compile Include="Mix\CalculateControlDigit\Int64Utils.cs" />
+    <Compile Include="Mix\CalculateControlDigit\IntSequenceUtils.cs" />
     <Compile Include="Mix\CalculateControlDigit\Program.cs" />
     <Compile Include="Mix\CarShop\Car.cs" />
     <Compile Include="Mix\CarShop\CarPersistence.cs" />
