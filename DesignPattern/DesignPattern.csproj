@@ -316,6 +316,9 @@
     <Compile Include="Mix\House\Program.cs" />
     <Compile Include="Mix\House\ProportionalScheduler.cs" />
     <Compile Include="Mix\House\WholeHouseScheduler.cs" />
+    <Compile Include="Mix\Iterator\Program.cs" />
+    <Compile Include="Mix\Iterator\Sequence.cs" />
+    <Compile Include="Mix\Iterator\SequenceIterator.cs" />
     <Compile Include="Mix\NTierApp\Application\Implementation\ApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Application\Interfaces\IDomainServices.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\Account.cs" />

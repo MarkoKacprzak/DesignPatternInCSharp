@@ -21,6 +21,7 @@
             Mix.CarShop.Program.Run();
             Mix.Appointments.Program.Run();
             Mix.CalculateControlDigit.Program.Run();
+            Mix.Iterator.Program.Run();
             Mix.NTierApp.Program.Run();
         }
     }
