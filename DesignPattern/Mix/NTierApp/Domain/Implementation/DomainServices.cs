@@ -30,22 +30,21 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
         }
 
         public bool IsRegistered(string username)
-        {
-            var user = this.userRepository.Find(username);
-            return user != null;
-        }
+            => userRepository.Find(username).Any();
 
         public void Deposit(string username, decimal amount)
         {
             var user = this.userRepository.Find(username);
-            user.Deposit(amount);
+            if (user.Any())
+                user.Single().Deposit(amount);
         }
 
         public decimal GetBalance(string username)
-        {
-            var user = this.userRepository.Find(username);
-            return user.Balance;
-        }
+         => userRepository
+            .Find(username)
+            .Select(user => user.Balance)
+            .DefaultIfEmpty(0)
+            .Single();
 
         public IEnumerable<StockItem> GetAvailableItems() =>
             productRepository.GetAll().Select(product => new StockItem(product.Name, product.Price));
@@ -59,10 +58,10 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
             var user = userRepository.Find(username);
 
-            if (user == null)
+            if (!user.Any())
                 return purchaseReportFactory.CreateNotRegistered(username);
 
-            return user.Purchase(product);
+            return user.Single().Purchase(product);
         }
     }
 }

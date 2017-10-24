@@ -14,15 +14,15 @@ namespace DesignPattern.Mix.NTierApp.Infrastructure.Implementation
             usernameToUser.Add(user.Username, user);
         }
 
-        public IUser Find(string username)
+        public IEnumerable<IUser> Find(string username)
         {
             
             IUser user = null;
             
             if (!usernameToUser.TryGetValue(username, out user))
-                return null;
+                return new IUser[0];
 
-            return user;
+            return new[] { user };
 
         }
     }
