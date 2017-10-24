@@ -6,18 +6,12 @@ namespace DesignPattern.Mix.CalculateControlDigit
     {
         public static IEnumerable<int> GetDigitsFromSignificant(this long number)
         {
-            var digits = new List<int>();
             do
             {
-
-                int digit = (int)(number % 10);
-                // sum += factor * digit;
-                // factor = 4 - factor;
-                digits.Add(digit);
+                yield return (int)(number % 10);
                 number /= 10;
             }
             while (number > 0);
-            return digits;
         }
     }
 }
