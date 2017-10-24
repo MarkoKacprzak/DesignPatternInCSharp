@@ -35,12 +35,16 @@ namespace DesignPattern.Mix.CalculateControlDigit
             int sum = 0;
 
             var factors = GetMultiplicativeFactors().GetEnumerator();
+            var weightedDigits = new List<int>();
             foreach (var digit in GetDigitsFromSignificant(number))
             {
                 factors.MoveNext();
-                sum += factors.Current * digit;
+                weightedDigits.Add(factors.Current * digit);
             }
-
+            foreach(int weightedDigit in weightedDigits)
+            {
+                sum += weightedDigit;
+            }
             int result = sum % 11;
             if (result == 10)
                 result = 1;
