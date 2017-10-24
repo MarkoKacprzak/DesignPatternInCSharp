@@ -2,17 +2,14 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class ProductNotFound : IPurchaseReport
+    public class ProductNotFound : IPurchaseReport
     {
-        private readonly string username;
-        private readonly string productName;
-
+        public string Username { get; }
+        public string ProductName { get; }
         public ProductNotFound(string username, string productName)
         {
-            this.username = username;
-            this.productName = productName;
+            Username = username;
+            ProductName = productName;
         }
-        public string ToUiText() => $"Dear {username}\n" +
-            $"Sorry to inform you that we have no {productName} left.";
     }
 }

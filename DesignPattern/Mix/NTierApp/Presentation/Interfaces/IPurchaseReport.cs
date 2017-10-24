@@ -2,6 +2,5 @@
 {
     public interface IPurchaseReport
     {
-        string ToUiText();
     }
 }

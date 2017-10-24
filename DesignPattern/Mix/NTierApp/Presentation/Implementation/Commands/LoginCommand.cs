@@ -1,4 +1,5 @@
-﻿using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
+﻿using DesignPattern.Mix.NTierApp.Presentation.Implementation.CommandResults;
+using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
 using System;
 
 namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
@@ -13,17 +14,17 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
             this.appServices = appServices;
         }
 
-        public void Execute()
+        public ICommandResult Execute()
         {
 
             Console.Write("Enter username: ");
             var username = Console.ReadLine();
 
             if (appServices.Login(username))
-                Console.WriteLine($"User '{username}' is now logged in.");
-            else
-                Console.WriteLine($"Login failed for user '{username}'.");
+                return new UserLoggedIn(username,
+                    appServices.LoggedInUserBalance);
 
+            return new LoginFailed(username);
         }
     }
 }

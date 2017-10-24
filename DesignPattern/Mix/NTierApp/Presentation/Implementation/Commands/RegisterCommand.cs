@@ -1,5 +1,6 @@
 ﻿using System;
 using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
+using DesignPattern.Mix.NTierApp.Presentation.Implementation.CommandResults;
 
 namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
 {
@@ -13,7 +14,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
             this.appServices = appServices;
         }
 
-        public void Execute()
+        public ICommandResult Execute()
         {
             
             Console.Write("Enter username to register: ");
@@ -21,8 +22,8 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
 
             appServices.RegisterUser(username);
 
-            Console.WriteLine($"User '{username}' is now registered.");
-
+            //Console.WriteLine($"User '{username}' is now registered.");
+            return new UserRegistered(username);
         }
     }
 }

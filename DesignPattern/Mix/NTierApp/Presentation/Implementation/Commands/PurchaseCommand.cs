@@ -1,4 +1,5 @@
-﻿using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
+﻿using DesignPattern.Mix.NTierApp.Presentation.Implementation.CommandResults;
+using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
 using System;
 
 namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
@@ -13,7 +14,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
             this.appServices = appServices;
         }
 
-        public void Execute()
+        public ICommandResult Execute()
         {
 
             ShowStock();
@@ -21,9 +22,9 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
             Console.Write("Enter item name: ");
             var itemName = Console.ReadLine();
 
-            var receipt = this.appServices.Purchase(itemName);
-
-            DisplayReport(receipt);
+            var report = this.appServices.Purchase(itemName);
+            return new PurchaseResult(report);
+            //DisplayReport(receipt);
         }
 
         private void ShowStock()
@@ -33,11 +34,6 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation.Commands
                 Console.WriteLine("{0,10} {1:C}", item.Name, item.Price);
             Console.WriteLine();
             Console.WriteLine();
-        }
-
-        private void DisplayReport(IPurchaseReport report)
-        {
-            Console.WriteLine(report.ToUiText());
         }
     }
 }

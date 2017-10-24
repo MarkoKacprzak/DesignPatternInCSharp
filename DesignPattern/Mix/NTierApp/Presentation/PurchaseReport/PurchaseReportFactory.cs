@@ -2,7 +2,7 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class PurchaseReportFactory : IPurchaseReportFactory
+    public class PurchaseReportFactory : IPurchaseReportFactory
     {
         public IPurchaseReport CreateFailedPurchase()
             => FailedPurchase.Instance;

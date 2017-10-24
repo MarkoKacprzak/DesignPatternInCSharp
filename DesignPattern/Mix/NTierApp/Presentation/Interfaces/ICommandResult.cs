@@ -1,7 +1,6 @@
 ﻿namespace DesignPattern.Mix.NTierApp.Presentation.Interfaces
 {
-    public interface ICommand
+    public interface ICommandResult
     {
-        ICommandResult Execute();
     }
 }

@@ -335,6 +335,13 @@
     <Compile Include="Mix\NTierApp\Infrastructure\Implementation\ProductData.cs" />
     <Compile Include="Mix\NTierApp\Infrastructure\Implementation\ProductRepository.cs" />
     <Compile Include="Mix\NTierApp\Infrastructure\Implementation\UserRepository.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\DepositResult.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\LoginFailed.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\NoResult.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\PurchaseResult.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\UserLoggedIn.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\UserLoggedOut.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\CommandResults\UserRegistered.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\DepositCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\DoNothingCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\LoginCommand.cs" />
@@ -343,7 +350,9 @@
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\RegisterCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\MenuItem.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\UserInterface.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Interfaces\ICommandResult.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IPurchaseReportFactory.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Interfaces\IView.cs" />
     <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\FailedPurchase.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\ICommand.cs" />
@@ -356,6 +365,18 @@
     <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\PurchaseReportFactory.cs" />
     <Compile Include="Mix\NTierApp\Presentation\PurchaseReport\Receipt.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\StockItem.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\DepositView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\EmptyView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\FailedPurchaseView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\LoginFailedView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\NotEnoughMoneyView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\NotRegisteredView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\NotSignedInView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\ProductNotFoundView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\ReceiptView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\UserLoggedInView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\UserLoggedOutView.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Views\UserRegisteredView.cs" />
     <Compile Include="Mix\NTierApp\Program.cs" />
     <Compile Include="Mix\Reservation\AirplaneService.cs" />
     <Compile Include="Mix\Reservation\Application.cs" />
@@ -457,5 +478,6 @@
     <Content Include="Mix\NTierApp\ToComplexPresentationLayer.PNG" />
     <Content Include="Mix\NTierApp\WhereToPlace.PNG" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

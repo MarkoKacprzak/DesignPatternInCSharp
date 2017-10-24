@@ -2,14 +2,13 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class NotRegistered : IPurchaseReport
+    public class NotRegistered : IPurchaseReport
     {
-        private readonly string username;
+        public string Username { get; }
 
         public NotRegistered(string username)
         {
-            this.username = username;
+            Username = username;
         }
-        public string ToUiText() => $"User {username} is not registered.";
     }
 }

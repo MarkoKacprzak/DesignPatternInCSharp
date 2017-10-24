@@ -2,7 +2,7 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class FailedPurchase : IPurchaseReport
+    public class FailedPurchase : IPurchaseReport
     {
         private static FailedPurchase instance;
         private FailedPurchase()
@@ -16,10 +16,6 @@ namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
                     instance = new FailedPurchase();
                 return instance;
             }
-        }
-        public string ToUiText()
-        {
-            return "Purchase failed.";
         }
     }
 }

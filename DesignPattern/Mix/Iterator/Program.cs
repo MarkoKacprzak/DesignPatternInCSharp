@@ -12,8 +12,8 @@ namespace DesignPattern.Mix.Iterator
             int n = 10000000;
             long sum = 0;
             Stopwatch sw = Stopwatch.StartNew();
-            int stopAt = 10000000;
             /*
+            int stopAt = 10000000;
             //foreach (var item in Populates(n))
             foreach (var item in Populates(n))
                 //foreach (var item in new Sequence(n))

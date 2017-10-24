@@ -4,17 +4,16 @@ namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
     public class Receipt: IPurchaseReport
     {
-        private readonly string username;
-        private readonly string itemName;
-        private readonly decimal price;
+        public string Username { get; }
+        public string ProductName { get; }
+        public decimal Price { get; }
 
         public Receipt(string username, string itemName, decimal price)
         {
-            this.username = username;
-            this.itemName = itemName;
-            this.price = price;
+            Username = username;
+            ProductName = itemName;
+            Price = price;
         }
 
-        public string ToUiText() => $"Thank you for buying {itemName} for {price:C}";
     }
 }

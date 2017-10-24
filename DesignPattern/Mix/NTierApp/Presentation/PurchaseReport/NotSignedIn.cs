@@ -2,8 +2,7 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class NotSignedIn : IPurchaseReport
+    public class NotSignedIn : IPurchaseReport
     {
-        public string ToUiText() => "No user is signed in.";
     }
 }

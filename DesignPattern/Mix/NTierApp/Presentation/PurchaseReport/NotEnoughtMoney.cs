@@ -2,19 +2,17 @@
 
 namespace DesignPattern.Mix.NTierApp.Presentation.PurchaseReport
 {
-    class NotEnoughtMoney : IPurchaseReport
+    public class NotEnoughtMoney : IPurchaseReport
     {
-        private readonly string username;
-        private readonly string productName;
-        private readonly decimal price;
+        public string Username { get; }
+        public decimal Price { get; }
+        public string ProductName { get; }
 
-        public NotEnoughtMoney(string username,string productName, decimal price)
+        public NotEnoughtMoney(string username, string productName, decimal price)
         {
-            this.username = username;
-            this.productName = productName;
-            this.price = price;
+            Username = username;
+            ProductName = productName;
+            Price = price;
         }
-        public string ToUiText() => $"Dear {username}\n" +
-            $"You do not have {price:C} to pay for the {productName}.";
     }
 }
