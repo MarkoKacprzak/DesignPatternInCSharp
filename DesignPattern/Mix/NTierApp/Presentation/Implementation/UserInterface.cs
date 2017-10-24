@@ -15,8 +15,9 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation
         private readonly IApplicationServices appServices;
         private ICommand currentCommand = new DoNothingCommand();
         private readonly IEnumerable<MenuItem> menu;
+        private readonly ViewLocator viewLocator;
 
-        public UserInterface(IApplicationServices appServices)
+        public UserInterface(IApplicationServices appServices, ViewLocator viewLocator)
         {
 
             this.appServices = appServices;
@@ -30,7 +31,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation
                 MenuItem.CreateNonTerminal("Purchase", 'P', new PurchaseCommand(appServices), () => true),
                 MenuItem.CreateTerminal("Quit", 'Q')
             };
-
+            this.viewLocator = viewLocator;
         }
 
         public bool ReadCommand()
@@ -59,7 +60,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation
         {
             var result = currentCommand.Execute();
 
-            var view = LocateView(result);
+            var view = viewLocator.LocateServiceFor(result);
 
             Render(view);
 
@@ -78,7 +79,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation
 
             Console.WriteLine("\n{0}", delimiter);
         }
-
+        /*
         private IView LocateView(ICommandResult result)
         {
             var resultType = result.GetType();
@@ -133,7 +134,7 @@ namespace DesignPattern.Mix.NTierApp.Presentation.Implementation
             return new EmptyView();
 
         }
-
+        */
         private void ShowStatus()
         {
             

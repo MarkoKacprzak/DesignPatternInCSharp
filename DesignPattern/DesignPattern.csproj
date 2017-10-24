@@ -323,6 +323,7 @@
     <Compile Include="Mix\NTierApp\Application\Interfaces\IDomainServices.cs" />
     <Compile Include="Mix\NTierApp\Common\IEnumerableExtensions.cs" />
     <Compile Include="Mix\NTierApp\Common\Option.cs" />
+    <Compile Include="Mix\NTierApp\Common\ServiceLocator.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\Account.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\DomainServices.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\User.cs" />
@@ -350,6 +351,7 @@
     <Compile Include="Mix\NTierApp\Presentation\Implementation\Commands\RegisterCommand.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\MenuItem.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Implementation\UserInterface.cs" />
+    <Compile Include="Mix\NTierApp\Presentation\Implementation\ViewLocator.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\ICommandResult.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IPurchaseReportFactory.cs" />
     <Compile Include="Mix\NTierApp\Presentation\Interfaces\IView.cs" />
