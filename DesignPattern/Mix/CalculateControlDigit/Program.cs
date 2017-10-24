@@ -42,7 +42,7 @@ namespace DesignPattern.Mix.CalculateControlDigit
         /// <returns></returns>
         static int CalculateControlDigitOptimization(long number)
         {
-            var sum = 
+            var sum =
                 number
                 .GetDigitsFromSignificant()
                 .AddWeights(GetMultiplicativeFactors)
@@ -55,8 +55,17 @@ namespace DesignPattern.Mix.CalculateControlDigit
 
         }
 
-        private static IEnumerable<int> GetMultiplicativeFactors=>
-            new int[]{ 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3 };
+        private static IEnumerable<int> GetMultiplicativeFactors 
+        {
+            get
+            {
+                while(true)
+                {
+                    yield return 1;
+                    yield return 3;
+                }
+            }
+        }
 
      
         public static void Run()
