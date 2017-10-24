@@ -321,6 +321,7 @@
     <Compile Include="Mix\Iterator\SequenceIterator.cs" />
     <Compile Include="Mix\NTierApp\Application\Implementation\ApplicationServices.cs" />
     <Compile Include="Mix\NTierApp\Application\Interfaces\IDomainServices.cs" />
+    <Compile Include="Mix\NTierApp\Common\IEnumerableExtensions.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\Account.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\DomainServices.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\User.cs" />

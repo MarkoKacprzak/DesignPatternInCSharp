@@ -1,4 +1,5 @@
 ﻿using DesignPattern.Mix.NTierApp.Application.Interfaces;
+using DesignPattern.Mix.NTierApp.Common;
 using DesignPattern.Mix.NTierApp.Domain.Interfaces;
 using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
 using System.Collections.Generic;
@@ -35,8 +36,7 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
         public void Deposit(string username, decimal amount)
         {
             userRepository.Find(username)
-                .ToList()
-                    .ForEach(user => user.Deposit(amount));
+                .ForEach(user => user.Deposit(amount));
         }
 
         public decimal GetBalance(string username)
