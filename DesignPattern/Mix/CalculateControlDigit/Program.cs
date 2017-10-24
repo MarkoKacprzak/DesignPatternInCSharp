@@ -32,11 +32,11 @@ namespace DesignPattern.Mix.CalculateControlDigit
         }
         static int CalculateControlDigitOptimization(long number)
         {
-            var digits = number.GetDigitsFromSignificant();
-            var weightedDigits =
-                digits.Zip(GetMultiplicativeFactors, 
-                    (d, f) => d * f);
-            int sum = weightedDigits.Sum();
+            var sum = 
+                number
+                .GetDigitsFromSignificant()
+                .Zip(GetMultiplicativeFactors, (d, f) => d * f)
+                .Sum();
             int result = sum % 11;
             if (result == 10)
                 result = 1;
