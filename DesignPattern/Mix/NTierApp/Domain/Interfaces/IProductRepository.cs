@@ -5,6 +5,6 @@ namespace DesignPattern.Mix.NTierApp.Domain.Interfaces
     public interface IProductRepository
     {
         IEnumerable<IProduct> GetAll();
-        IProduct Find(string name);
+        IEnumerable<IProduct> Find(string name);
     }
 }

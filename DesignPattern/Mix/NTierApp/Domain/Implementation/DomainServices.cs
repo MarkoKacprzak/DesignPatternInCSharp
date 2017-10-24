@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 {
-    public class DomainServices: IDomainServices
+    public class DomainServices : IDomainServices
     {
 
         private readonly IUserRepository userRepository;
@@ -26,7 +26,6 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
         {
             var userAccount = new Account();
             var user = new User(username, userAccount, purchaseReportFactory);
-
             userRepository.Add(user);
         }
 
@@ -34,34 +33,33 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
             => userRepository.Find(username).Any();
 
         public void Deposit(string username, decimal amount)
-        {
+            =>
             userRepository.Find(username)
-                .ForEach(user => user.Deposit(amount));
-        }
+            .ForEach(user => user.Deposit(amount));
 
         public decimal GetBalance(string username)
-         => userRepository
+            => userRepository
             .Find(username)
             .Select(user => user.Balance)
             .DefaultIfEmpty(0)
             .Single();
 
         public IEnumerable<StockItem> GetAvailableItems() =>
-            productRepository.GetAll().Select(product => new StockItem(product.Name, product.Price));
+            productRepository
+            .GetAll()
+            .Select(product => new StockItem(product.Name, product.Price));
 
         public IPurchaseReport Purchase(string username, string itemName)
-        { 
-            var product = productRepository.Find(itemName);
+            => productRepository
+            .Find(itemName)
+            .Select(product => Purchase(username, product))
+            .DefaultIfEmpty(purchaseReportFactory.CreateProductNotFound(username, itemName))
+            .Single();
 
-            if (product == null)
-                return purchaseReportFactory.CreateProductNotFound(username, itemName);
-
-            var user = userRepository.Find(username);
-
-            if (!user.Any())
-                return purchaseReportFactory.CreateNotRegistered(username);
-
-            return user.Single().Purchase(product);
-        }
+        private IPurchaseReport Purchase(string username, IProduct product)
+            => userRepository.Find(username)
+            .Select(user => user.Purchase(product))
+            .DefaultIfEmpty(purchaseReportFactory.CreateNotRegistered(username))
+            .Single();
     }
 }

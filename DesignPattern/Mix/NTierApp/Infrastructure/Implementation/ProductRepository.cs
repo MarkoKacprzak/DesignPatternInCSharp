@@ -24,12 +24,11 @@ namespace DesignPattern.Mix.NTierApp.Infrastructure.Implementation
             return nameToPrice.Select(pair => new ProductData(pair.Key, pair.Value));
         }
 
-        public IProduct Find(string name)
+        public IEnumerable<IProduct> Find(string name)
         {
             if (nameToPrice.TryGetValue(name, out decimal price))
-                return new ProductData(name, price);
-            return null;
-
+                return new IProduct[] { new ProductData(name, price) };
+            return new IProduct[0];
         }
     }
 }
