@@ -33,11 +33,12 @@ namespace DesignPattern.Mix.CalculateControlDigit
         {
 
             int sum = 0;
-            int pos = 0;
-            int[] factors = { 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3 };
+
+            var factors = GetMultiplicativeFactors().GetEnumerator();
             foreach (var digit in GetDigitsFromSignificant(number))
             {
-                sum += factors[pos++] * digit;
+                factors.MoveNext();
+                sum += factors.Current * digit;
             }
 
             int result = sum % 11;
@@ -46,6 +47,11 @@ namespace DesignPattern.Mix.CalculateControlDigit
 
             return result;
 
+        }
+
+        private static IEnumerable<int> GetMultiplicativeFactors()
+        {
+            return new int[]{ 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3 };
         }
 
         private static IEnumerable<int> GetDigitsFromSignificant(long number)
