@@ -34,9 +34,9 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
         public void Deposit(string username, decimal amount)
         {
-            var user = this.userRepository.Find(username);
-            if (user.Any())
-                user.Single().Deposit(amount);
+            userRepository.Find(username)
+                .ToList()
+                    .ForEach(user => user.Deposit(amount));
         }
 
         public decimal GetBalance(string username)
