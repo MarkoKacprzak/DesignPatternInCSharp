@@ -1,10 +1,11 @@
 ﻿using DesignPattern.Mix.NTierApp.Domain.Interfaces;
 using DesignPattern.Mix.NTierApp.Presentation.Interfaces;
 using DesignPattern.Mix.NTierApp.Presentation.PurchaseReport;
+using System.Linq;
 
 namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 {
-    internal class User: IUser
+    internal class User : IUser
     {
         public string Username { get; private set; }
         private readonly IAccount account;
@@ -26,13 +27,11 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
         public decimal Balance => account.Balance;
 
         public IPurchaseReport Purchase(IProduct product)
-        {
-            var transaction = account.Withdraw(product.Price);
-
-            if (transaction == null)
-                return purchaseReportFactory.CreateNotEnoughMoney(Username, product.Name, product.Price);
-
-            return new Receipt(Username, product.Name, product.Price);
-        }
+            => account.TryWithdraw(product.Price)
+                .Select(trans => new Receipt(Username, product.Name, product.Price))
+                .DefaultIfEmpty(NotEnoughtMoneyReport(product.Name, product.Price))
+                .Single();
+        private IPurchaseReport NotEnoughtMoneyReport(string productName, decimal price)
+            => purchaseReportFactory.CreateNotEnoughMoney(Username, productName, price);
     }
 }

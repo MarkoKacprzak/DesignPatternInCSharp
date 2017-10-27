@@ -325,6 +325,8 @@
     <Compile Include="Mix\NTierApp\Common\Option.cs" />
     <Compile Include="Mix\NTierApp\Common\ServiceLocator.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\Account.cs" />
+    <Compile Include="Mix\NTierApp\Domain\Implementation\CreditAccount.cs" />
+    <Compile Include="Mix\NTierApp\Domain\Implementation\DebitAccount.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\DomainServices.cs" />
     <Compile Include="Mix\NTierApp\Domain\Implementation\User.cs" />
     <Compile Include="Mix\NTierApp\Domain\Interfaces\IAccount.cs" />

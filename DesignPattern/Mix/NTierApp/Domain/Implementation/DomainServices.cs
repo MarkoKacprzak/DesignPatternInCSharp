@@ -24,7 +24,7 @@ namespace DesignPattern.Mix.NTierApp.Domain.Implementation
 
         public void CreateUser(string username)
         {
-            var userAccount = new Account();
+            var userAccount = new DebitAccount();
             var user = new User(username, userAccount, purchaseReportFactory);
             userRepository.Add(user);
         }
