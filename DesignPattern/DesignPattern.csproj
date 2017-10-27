@@ -61,6 +61,16 @@
     <Compile Include="Behavioral\ChainOfResponsibility\ConcreteHandler3.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Demo.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Handler.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\ApprovalResponse.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\ConsoleInput.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\Employee.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\EndOfChainExpenseHandler.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\ExpenseHandler.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\ExpenseReport.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\IExpenseApprover.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\IExpenseHandler.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Common\IExpenseReport.cs" />
+    <Compile Include="Behavioral\ChainOfResponsibility\Sample2\Sample.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Sample\CEO.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Sample\Client.cs" />
     <Compile Include="Behavioral\ChainOfResponsibility\Sample\Director.cs" />
