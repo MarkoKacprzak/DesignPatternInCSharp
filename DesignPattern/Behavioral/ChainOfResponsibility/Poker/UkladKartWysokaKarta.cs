@@ -2,7 +2,7 @@
 {
     class UkladKartWysokaKarta : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
             return Poker.Uklad.WysokaKarta;
         }

@@ -16,9 +16,9 @@
                  .ZarejestrujNastepny(new UkladKartWysokaKarta());
         }
 
-        public static Uklad ZnajdzUklad(RozdaneKarty hand)
+        public static Uklad ZnajdzUklad(RozdaneKarty karty)
         {
-            return _instance.Start.Uklad(hand);
+            return _instance.Start.Uklad(karty);
         }
 
         private UkladKart Start { get; set; }

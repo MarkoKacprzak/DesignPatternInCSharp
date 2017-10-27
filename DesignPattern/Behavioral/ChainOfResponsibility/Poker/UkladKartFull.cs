@@ -4,11 +4,11 @@ namespace DesignPattern.Behavioral.ChainOfResponsibility.Poker
 {
     class UkladKartFull : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
             Dictionary<Figura, int> seen = new Dictionary<Figura, int>();
 
-            foreach (Karta c in hand.Karty)
+            foreach (Karta c in karty.Karty)
             {
                 if (seen.ContainsKey(c.Figura))
                 {
@@ -28,7 +28,7 @@ namespace DesignPattern.Behavioral.ChainOfResponsibility.Poker
                 }
             }
 
-            return Nastepny.Uklad(hand);
+            return Nastepny.Uklad(karty);
         }
     }
 }

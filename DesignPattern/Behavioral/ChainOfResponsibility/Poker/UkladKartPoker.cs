@@ -2,14 +2,14 @@
 {
     class UkladKartPoker : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
-            if (WKolorze(hand) && WStricie(hand))
+            if (WKolorze(karty) && WStricie(karty))
             {
                 return Poker.Uklad.Poker;
             }
 
-            return Nastepny.Uklad(hand);
+            return Nastepny.Uklad(karty);
         }
     }
 }

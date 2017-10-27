@@ -2,14 +2,14 @@
 {
     class UkladKartPokerKrolewski : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
-            if(WKolorze(hand) && WStricie(hand) && hand.WysokaKarta.Figura == Figura.As)
+            if(WKolorze(karty) && WStricie(karty) && karty.WysokaKarta.Figura == Figura.As)
             {
                 return Poker.Uklad.PokerKrolewski;
             }
 
-            return Nastepny.Uklad(hand);
+            return Nastepny.Uklad(karty);
         }
     }
 }

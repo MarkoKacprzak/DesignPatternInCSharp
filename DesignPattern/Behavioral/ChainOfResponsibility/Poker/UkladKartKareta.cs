@@ -2,14 +2,14 @@
 {
     class UkladKartKareta : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
-            if (WGrupie(4, hand))
+            if (WGrupie(4, karty))
             {
                 return Poker.Uklad.Kareta;
             }
 
-            return Nastepny.Uklad(hand);
+            return Nastepny.Uklad(karty);
         }
     }
 }

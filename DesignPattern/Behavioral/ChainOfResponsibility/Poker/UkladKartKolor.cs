@@ -2,14 +2,14 @@
 {
     class UkladKartKolor : UkladKart
     {
-        public override Uklad Uklad(RozdaneKarty hand)
+        public override Uklad Uklad(RozdaneKarty karty)
         {
-            if (WKolorze(hand))
+            if (WKolorze(karty))
             {
                 return Poker.Uklad.Kolor;
             }
 
-            return Nastepny.Uklad(hand);
+            return Nastepny.Uklad(karty);
         }
     }
 }
