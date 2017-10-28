@@ -163,6 +163,12 @@
     <Compile Include="Behavioral\Iterator\ConcreteIterator.cs" />
     <Compile Include="Behavioral\Iterator\Demo.cs" />
     <Compile Include="Behavioral\Iterator\Iterator.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\Assert.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\DemoTree.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\DemoTreeBreadthFirstEnumerator.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\DemoTreeEnumerator.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\DemoTreeShould.cs" />
+    <Compile Include="Behavioral\Iterator\Tree\Sample.cs" />
     <Compile Include="Behavioral\Mediator\Colleague.cs" />
     <Compile Include="Behavioral\Mediator\ConcreteColleague1.cs" />
     <Compile Include="Behavioral\Mediator\ConcreteColleague2.cs" />
