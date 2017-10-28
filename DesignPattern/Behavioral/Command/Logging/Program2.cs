@@ -35,7 +35,7 @@ namespace DesignPattern.Behavioral.Command.Logging
             Console.WriteLine("Usage: App CommandName Arguments");
             Console.WriteLine("Commands:");
             foreach (var command in availableCommands)
-                Console.WriteLine($"  {command.Description}", );
+                Console.WriteLine($"  {command.Description}");
         }
     }
 }
