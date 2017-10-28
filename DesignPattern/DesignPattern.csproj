@@ -102,6 +102,17 @@
     <Compile Include="Behavioral\Command\ConcreteCommand.cs" />
     <Compile Include="Behavioral\Command\Demo.cs" />
     <Compile Include="Behavioral\Command\Invoker.cs" />
+    <Compile Include="Behavioral\Command\Logging\CommandExecutor.cs" />
+    <Compile Include="Behavioral\Command\Logging\CommandParser.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\CreateOrderCommand.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\ICommand.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\ICommandFactory.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\NotFoundCommand.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\ShipOrderCommand.cs" />
+    <Compile Include="Behavioral\Command\Logging\Commands\UpdateOrderCommand.cs" />
+    <Compile Include="Behavioral\Command\Logging\Program1.cs" />
+    <Compile Include="Behavioral\Command\Logging\Program2.cs" />
+    <Compile Include="Behavioral\Command\Logging\Sample.cs" />
     <Compile Include="Behavioral\Command\Receiver.cs" />
     <Compile Include="Behavioral\Command\Sample2\AllLightsCommand.cs" />
     <Compile Include="Behavioral\Command\Sample2\Command.cs" />
