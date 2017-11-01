@@ -1,7 +1,11 @@
-﻿namespace DesignPattern
+﻿using DesignPattern.Behavioral.Memento.Paint;
+using System;
+
+namespace DesignPattern
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             Get.Run("Behavioral");

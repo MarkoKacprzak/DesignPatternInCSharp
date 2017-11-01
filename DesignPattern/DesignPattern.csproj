@@ -45,14 +45,19 @@
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Classic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behavioral\ChainOfResponsibility\Client.cs" />
@@ -198,6 +203,13 @@
     <Compile Include="Behavioral\Memento\Demo.cs" />
     <Compile Include="Behavioral\Memento\Memento.cs" />
     <Compile Include="Behavioral\Memento\Originator.cs" />
+    <Compile Include="Behavioral\Memento\Paint\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Behavioral\Memento\Paint\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Behavioral\Memento\Paint\Sample.cs" />
     <Compile Include="Behavioral\Memento\Sample\Memento.cs" />
     <Compile Include="Behavioral\Memento\Sample\ProspectMemory.cs" />
     <Compile Include="Behavioral\Memento\Sample\SalesProspect.cs" />
@@ -557,6 +569,15 @@
     <Content Include="Mix\NTierApp\ToComplexPresentationLayer.PNG" />
     <Content Include="Mix\NTierApp\WhereToPlace.PNG" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Behavioral\Memento\Paint\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Behavioral\Memento\Paint\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

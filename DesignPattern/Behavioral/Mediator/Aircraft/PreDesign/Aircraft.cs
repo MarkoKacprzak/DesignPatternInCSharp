@@ -44,5 +44,7 @@ namespace DesignPattern.Behavioral.Mediator.Aircraft.PreDesign
             var incoming = (Aircraft) obj;
             return this.CallSign.Equals(incoming.CallSign);
         }
+        public override int GetHashCode()
+            => base.GetHashCode();
     }
 }
