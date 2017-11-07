@@ -301,6 +301,17 @@
     <Compile Include="Creational\AbstractFactory\ProductA2.cs" />
     <Compile Include="Creational\AbstractFactory\ProductB1.cs" />
     <Compile Include="Creational\AbstractFactory\ProductB2.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Factories\Interfaces\IUserFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Factories\Machine\MachineFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Factories\Person\PersonFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Interfaces\IUser.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Interfaces\IUserIdentity.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Models\IdentityCard.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Models\MacAddress.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Models\Machine.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Models\Person.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Models\Producer.cs" />
+    <Compile Include="Creational\AbstractFactory\Sample2\Sample.cs" />
     <Compile Include="Creational\AbstractFactory\Sample\AfricaFactory.cs" />
     <Compile Include="Creational\AbstractFactory\Sample\AmericaFactory.cs" />
     <Compile Include="Creational\AbstractFactory\Sample\AnimalWorld.cs" />
@@ -597,6 +608,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Creational\Specification\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
