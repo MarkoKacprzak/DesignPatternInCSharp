@@ -1,4 +1,5 @@
-﻿using Substitution.Factories.Interfaces;
+﻿using Substitution.Builders.Person;
+using Substitution.Factories.Interfaces;
 using Substitution.Factories.Machine;
 using Substitution.Factories.Person;
 using Substitution.Interfaces;
@@ -11,6 +12,12 @@ namespace Substitution
     {
         static void ConfigureUser()
         {
+            var builder = new PersonBuilder();
+            builder.SetFirstName("Max");
+            builder.SetLastName("Planc");
+            var person=builder.Build();
+
+
             IUserFactory factory = new PersonFactory();
             IUser user = factory.CreateUser("Max", "Planck");
             IUserIdentity id = factory.CreateIdentity();
