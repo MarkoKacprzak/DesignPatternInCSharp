@@ -1,4 +1,5 @@
-﻿using Substitution.Common;
+﻿using Substitution.Builders.Interfaces;
+using Substitution.Common;
 using Substitution.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace Substitution.Builders.Person
 {
-    public class PersonBuilder
+    public class PersonBuilder: IFirstNameHolder, ILastNameHolder, IPrimaryContactHolder, IContanctHolder, IPersonBuilder
     {
         private INonEmptyStringState FirstNameState { get; set; }
             = new UninitializedString();
@@ -19,26 +20,33 @@ namespace Substitution.Builders.Person
             Contacts = new List<IContactInfo>();
             PrimaryContact = new UninitializedPrimaryContact(Contacts.Contains);
         }
-        public void SetFirstName(string firstName)
+        public ILastNameHolder SetFirstName(string firstName)
         {
             FirstNameState = FirstNameState.Set(firstName);
+            return this;
         }
-        public void SetLastName(string lastName)
+        public IPrimaryContactHolder SetLastName(string lastName)
         {
             LastNameState = LastNameState.Set(lastName);
+            return this;
         }
-        public void Add(IContactInfo contact)
+        public IContanctHolder Add(IContactInfo contact)
         {
             if (Contacts.Contains(contact))
                 throw new ArgumentException();
 
             Contacts.Add(contact);
+            return this;
         }
 
-        public void SetPrimaryContact(IContactInfo contact)
+        public IContanctHolder SetPrimaryContact(IContactInfo contact)
         {
+            Add(contact);
             PrimaryContact = PrimaryContact.Set(contact);
+            return this;
         }
+        public IPersonBuilder NoMoreContacts()
+            => this;
 
         public Models.Person Build()
         {

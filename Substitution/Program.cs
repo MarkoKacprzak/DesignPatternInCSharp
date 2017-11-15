@@ -12,14 +12,14 @@ namespace Substitution
     {
         static void ConfigureUser()
         {
-            var builder = new PersonBuilder();
-            builder.SetFirstName("Max");
-            builder.SetLastName("Planc");
-            IContactInfo email = new EmailAdress("MarekKacprzak@o2.pl");
-            builder.Add(email);
-            builder.Add(new EmailAdress("MarekKacprzak@windowslive.com"));
-            builder.SetPrimaryContact(email);
-            var person =builder.Build();
+            var person = new PersonBuilder()
+                .SetFirstName("Max")
+                .SetLastName("Planc")
+                .SetPrimaryContact(new EmailAdress("MarekKacprzak@o2.pl"))
+                .Add(new EmailAdress("MarekKacprzak@windowslive.com"))
+                .NoMoreContacts()
+                .Build();
+           // builder.SetPrimaryContact(email);
             Console.WriteLine(person);
 
             IUserFactory factory = new PersonFactory();
