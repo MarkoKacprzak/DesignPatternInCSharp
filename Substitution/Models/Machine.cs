@@ -21,6 +21,16 @@ namespace Substitution.Models
         public bool CanAcceptIdentity(IUserIdentity identity) =>
             identity is MacAddress;
 
+        public void Add(IContactInfo contact)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetPrimaryContact(IContactInfo contact)
+        {
+            throw new NotImplementedException();
+        }
+
         public Machine(Producer producer, string model)
         {
             if (producer == null)

@@ -15,7 +15,11 @@ namespace Substitution
             var builder = new PersonBuilder();
             builder.SetFirstName("Max");
             builder.SetLastName("Planc");
-            var person=builder.Build();
+            IContactInfo email = new EmailAdress("MarekKacprzak@o2.pl");
+            builder.Add(email);
+            builder.Add(new EmailAdress("MarekKacprzak@windowslive.com"));
+            builder.SetPrimaryContact(email);
+            var person =builder.Build();
 
 
             IUserFactory factory = new PersonFactory();
