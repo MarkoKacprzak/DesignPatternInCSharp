@@ -20,7 +20,7 @@ namespace Substitution
             builder.Add(new EmailAdress("MarekKacprzak@windowslive.com"));
             builder.SetPrimaryContact(email);
             var person =builder.Build();
-
+            Console.WriteLine(person);
 
             IUserFactory factory = new PersonFactory();
             IUser user = factory.CreateUser("Max", "Planck");

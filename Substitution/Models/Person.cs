@@ -1,6 +1,7 @@
 ﻿using System;
 using Substitution.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Substitution.Models
 {
@@ -50,7 +51,6 @@ namespace Substitution.Models
                 this.name = value;
             }
         }
-
         public string Surname
         {
             get { return this.surname; }
@@ -61,12 +61,25 @@ namespace Substitution.Models
                 this.surname = value;
             }
         }
-
         public Person(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
         }
+        public override string ToString() 
+            => $"{Name} {Surname} [{AllContactsLabel}]";
+
+        private string AllContactsLabel 
+            => string.Join(", ", this.AllContactLabels.ToArray());
+        private IEnumerable<string> AllContactLabels 
+            => Contacts.Select(this.GetLabelFor);
+        private string GetLabelFor(IContactInfo contact) 
+            => $"{GetUiMarkFor(contact)}{contact}";
+        private string GetUiMarkFor(IContactInfo contact) 
+            => IsPrimary(contact) ? "*" : string.Empty;
+        private bool IsPrimary(IContactInfo contact) 
+            => contact.Equals(this.PrimaryContact);
+
 
     }
 }
