@@ -12,12 +12,13 @@ namespace Substitution
     {
         static void ConfigureUser()
         {
-            var person = new PersonBuilder()
-                .SetFirstName("Max")
-                .SetLastName("Planc")
-                .SetPrimaryContact(new EmailAdress("MarekKacprzak@o2.pl"))
-                .Add(new EmailAdress("MarekKacprzak@windowslive.com"))
-                .NoMoreContacts()
+            var person = PersonBuilder
+                .Person()
+                .WithFirstName("Max")
+                .WithLastName("Planc")
+                .WithPrimaryContact(new EmailAdress("MarekKacprzak@o2.pl"))
+                .WithSecondaryContact(new EmailAdress("MarekKacprzak@windowslive.com"))
+                .AndNoMoreContacts()
                 .Build();
            // builder.SetPrimaryContact(email);
             Console.WriteLine(person);

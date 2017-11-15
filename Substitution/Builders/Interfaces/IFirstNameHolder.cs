@@ -7,20 +7,20 @@ namespace Substitution.Builders.Interfaces
 {
     public interface IFirstNameHolder
     {
-        ILastNameHolder SetFirstName(string name);
+        ILastNameHolder WithFirstName(string name);
     }
     public interface ILastNameHolder
     {
-        IPrimaryContactHolder SetLastName(string name);
+        IPrimaryContactHolder WithLastName(string name);
     }
     public interface IPrimaryContactHolder
     {
-        IContanctHolder SetPrimaryContact(IContactInfo contact);
+        IContanctHolder WithPrimaryContact(IContactInfo contact);
     }
     public interface IContanctHolder
     {
-        IContanctHolder Add(IContactInfo contact);
-        IPersonBuilder NoMoreContacts();
+        IContanctHolder WithSecondaryContact(IContactInfo contact);
+        IPersonBuilder AndNoMoreContacts();
     }
     public interface IPersonBuilder
     {

@@ -15,22 +15,24 @@ namespace Substitution.Builders.Person
             = new UninitializedString();
         private IPrimaryContactState PrimaryContact { get; set; }
         public IList<IContactInfo> Contacts { get; }
-        public PersonBuilder()
+        private PersonBuilder()
         {
             Contacts = new List<IContactInfo>();
             PrimaryContact = new UninitializedPrimaryContact(Contacts.Contains);
         }
-        public ILastNameHolder SetFirstName(string firstName)
+        public static IFirstNameHolder Person()
+            => new PersonBuilder();
+        public ILastNameHolder WithFirstName(string firstName)
         {
             FirstNameState = FirstNameState.Set(firstName);
             return this;
         }
-        public IPrimaryContactHolder SetLastName(string lastName)
+        public IPrimaryContactHolder WithLastName(string lastName)
         {
             LastNameState = LastNameState.Set(lastName);
             return this;
         }
-        public IContanctHolder Add(IContactInfo contact)
+        public IContanctHolder WithSecondaryContact(IContactInfo contact)
         {
             if (Contacts.Contains(contact))
                 throw new ArgumentException();
@@ -39,13 +41,13 @@ namespace Substitution.Builders.Person
             return this;
         }
 
-        public IContanctHolder SetPrimaryContact(IContactInfo contact)
+        public IContanctHolder WithPrimaryContact(IContactInfo contact)
         {
-            Add(contact);
+            WithSecondaryContact(contact);
             PrimaryContact = PrimaryContact.Set(contact);
             return this;
         }
-        public IPersonBuilder NoMoreContacts()
+        public IPersonBuilder AndNoMoreContacts()
             => this;
 
         public Models.Person Build()
