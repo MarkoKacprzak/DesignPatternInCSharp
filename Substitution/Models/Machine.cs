@@ -3,24 +3,33 @@ using Substitution.Interfaces;
 
 namespace Substitution.Models
 {
-    public class Machine: IUser<MacAddress>
+    public class Machine: IUser
     {
         public Producer Producer { get; set; }
         public string Model { get; set; }
-        public MacAddress Identity { get; private set; }
 
-        public void SetIdentity(MacAddress identity)
+        public void SetIdentity(IUserIdentity identity)
         {
-            this.Identity = identity as MacAddress;
-            // do something with address.
+            if (!this.CanAcceptIdentity(identity))
+                throw new ArgumentException();
+
+            MacAddress address = identity as MacAddress;
+            // do something with address.NicPart
+
         }
+
+        public bool CanAcceptIdentity(IUserIdentity identity) =>
+            identity is MacAddress;
 
         public Machine(Producer producer, string model)
         {
+            if (producer == null)
+                throw new ArgumentNullException();
+
             if (string.IsNullOrEmpty(model))
                 throw new ArgumentException();
 
-            this.Producer = producer ?? throw new ArgumentNullException();
+            this.Producer = producer;
             this.Model = model;
 
         }

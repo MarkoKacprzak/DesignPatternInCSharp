@@ -2,8 +2,9 @@
 {
     class BillMurrayCard: IdentityCard
     {
-        public BillMurrayCard():base("123123123")
+        public BillMurrayCard()
         {
+            // I know my SSN
         }
     }
 }

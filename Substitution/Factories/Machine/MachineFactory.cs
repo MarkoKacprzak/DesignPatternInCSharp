@@ -6,7 +6,7 @@ using Substitution.Models;
 
 namespace Substitution.Factories.Machine
 {
-    public class MachineFactory: IUserFactory<IUser<MacAddress>,MacAddress>
+    public class MachineFactory: IUserFactory
     {
         private Dictionary<string, Producer> NameToProducer { get; }
 
@@ -25,10 +25,15 @@ namespace Substitution.Factories.Machine
             return producer;
         }
 
-        public IUser<MacAddress> CreateUser(string name1, string name2)
+        public IUser CreateUser(string name1, string name2)
         {
             Producer producer = GetProducer(name1);
             return new Models.Machine(producer, name2);
+        }
+
+        public IUserIdentity CreateIdentity()
+        {
+            return new MacAddress();
         }
     }
 }

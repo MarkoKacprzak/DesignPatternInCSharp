@@ -4,14 +4,16 @@ using Substitution.Models;
 
 namespace Substitution.Factories.Person
 {
-    public class PersonFactory : IUserFactory<Models.Person, IdentityCard>
+    public class PersonFactory: IUserFactory
     {
-        public Models.Person CreateUser(string name1, string name2)
+        public IUser CreateUser(string name1, string name2)
         {
             return new Models.Person(name1, name2);
         }
 
-      //  IUser<IdentityCard> IUserFactory<IUser<IdentityCard>, IdentityCard>.CreateUser(string name1, string name2)
-      //      => CreateUser(name1, name2);
+        public IUserIdentity CreateIdentity()
+        {
+            return new IdentityCard();
+        }
     }
 }

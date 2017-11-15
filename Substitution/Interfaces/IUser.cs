@@ -1,8 +1,8 @@
 ﻿namespace Substitution.Interfaces
 {
-    public interface IUser<in TIdentity>: ITicketHolder
-        where TIdentity: IUserIdentity
+    public interface IUser: ITicketHolder
     {
-        void SetIdentity(TIdentity identity);
+        void SetIdentity(IUserIdentity identity);
+        bool CanAcceptIdentity(IUserIdentity identity);
     }
 }

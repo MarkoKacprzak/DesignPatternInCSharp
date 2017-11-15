@@ -3,19 +3,26 @@ using Substitution.Interfaces;
 
 namespace Substitution.Models
 {
-    public class Person: IUser<IdentityCard>
+    public class Person: IUser
     {
         private string name;
         private string surname;
 
-        public void SetIdentity(IdentityCard identity)
+        public void SetIdentity(IUserIdentity identity)
         {
-            this.Identity = identity;
+
+            if (!this.CanAcceptIdentity(identity))
+                throw new ArgumentException();
+
+            IdentityCard idCard = identity as IdentityCard;
+
             Console.WriteLine("Accepted person identity card.");
             // do something with idCard.SSN
 
         }
-        
+
+        public bool CanAcceptIdentity(IUserIdentity identity) =>
+            identity is IdentityCard;
 
         public string Name
         {
@@ -38,8 +45,6 @@ namespace Substitution.Models
                 this.surname = value;
             }
         }
-
-        public IdentityCard Identity { get; private set; }
 
         public Person(string name, string surname)
         {
