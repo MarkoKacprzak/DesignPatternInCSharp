@@ -7,11 +7,8 @@ namespace Substitution.Models
 {
     public class Person: IUser
     {
-        private string name;
-        private string surname;
-
-        private IList<IContactInfo> Contacts { get; } = new List<IContactInfo>();
-        private IContactInfo PrimaryContact { get; set; }
+        private IList<IContactInfo> Contacts { get; } 
+        private IContactInfo PrimaryContact { get; }
         public void SetIdentity(IUserIdentity identity)
         {
 
@@ -23,46 +20,24 @@ namespace Substitution.Models
             Console.WriteLine("Accepted person identity card.");
             // do something with idCard.SSN
         }
-        public void Add(IContactInfo contact)
-        {
-            if (Contacts.Contains(contact))
-                throw new ArgumentException();
-
-            Contacts.Add(contact);
-        }
-        public void SetPrimaryContact(IContactInfo contact)
-        {
-            if (contact == null)
-                throw new ArgumentNullException();
-            if (!Contacts.Contains(contact))
-                throw new ArgumentException();
-            this.PrimaryContact = contact;
-        }
         public bool CanAcceptIdentity(IUserIdentity identity) =>
             identity is IdentityCard;
 
-        public string Name
-        {
-            get { return this.name; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException("First name must be non-empty.");
-                this.name = value;
-            }
-        }
-        public string Surname
-        {
-            get { return this.surname; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException("Last name must be non-empty;");
-                this.surname = value;
-            }
-        }
+        public string Name { get; }
+        public string Surname { get; }
         public Person(string name, string surname)
         {
+            this.Name = name;
+            this.Surname = surname;
+        }
+        public Person(string name, string surname, IEnumerable<IContactInfo> contacts, IContactInfo primary)
+        {
+            if (contacts == null || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(surname) || primary==null)
+                throw new ArgumentNullException();
+            if (!contacts.Contains(primary))
+                throw new ArgumentException();
+            this.Contacts = new List<IContactInfo>(contacts);
+            this.PrimaryContact = primary;
             this.Name = name;
             this.Surname = surname;
         }

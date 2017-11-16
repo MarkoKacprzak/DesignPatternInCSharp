@@ -7,12 +7,12 @@ using System.Text;
 
 namespace Substitution.Builders.Person
 {
-    public class PersonBuilder: IFirstNameHolder, ILastNameHolder, IPrimaryContactHolder, IContanctHolder, IPersonBuilder
+    public class PersonBuilder : IFirstNameHolder, ILastNameHolder, IPrimaryContactHolder, IContanctHolder, IPersonBuilder
     {
-        private string FirstName { get;  }
+        private string FirstName { get; }
         private string LastName { get; }
         private IContactInfo PrimaryContact { get; }
-        public IList<IContactInfo> Contacts { get; }  
+        public IList<IContactInfo> Contacts { get; }
         public static IFirstNameHolder Person()
             => new PersonBuilder();
         public PersonBuilder()
@@ -21,11 +21,11 @@ namespace Substitution.Builders.Person
         public PersonBuilder(string firstName) : this(firstName, null)
         {
         }
-        public PersonBuilder(string firstName,string lastName)
+        public PersonBuilder(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
-            Contacts= new List<IContactInfo>();
+            Contacts = new List<IContactInfo>();
         }
         public PersonBuilder(string firstName, string lastName, IList<IContactInfo> contacts, IContactInfo primary)
         {
@@ -34,7 +34,7 @@ namespace Substitution.Builders.Person
             FirstName = firstName;
             LastName = lastName;
         }
-        public PersonBuilder(string firstName, string lastName,  IList<IContactInfo> contacts, IContactInfo primary, IContactInfo secondary)
+        public PersonBuilder(string firstName, string lastName, IList<IContactInfo> contacts, IContactInfo primary, IContactInfo secondary)
         {
             Contacts = new List<IContactInfo>(contacts) { secondary };
             FirstName = firstName;
@@ -47,20 +47,13 @@ namespace Substitution.Builders.Person
         public IPrimaryContactHolder WithLastName(string lastName)
             => new PersonBuilder(this.FirstName, lastName);
         public IContanctHolder WithSecondaryContact(IContactInfo contact)
-        => new PersonBuilder(FirstName, LastName, Contacts,PrimaryContact, contact);
+            => new PersonBuilder(FirstName, LastName, Contacts, PrimaryContact, contact);
 
         public IContanctHolder WithPrimaryContact(IContactInfo contact)
-        => new PersonBuilder(FirstName, LastName, Contacts, contact);
+            => new PersonBuilder(FirstName, LastName, Contacts, contact);
         public IPersonBuilder AndNoMoreContacts()
             => this;
-
         public Models.Person Build()
-        {
-            var person = new Models.Person(FirstName, LastName);
-            foreach (var contact in Contacts)
-                person.Add(contact);
-            person.SetPrimaryContact(PrimaryContact);
-            return person;
-        }
+            => new Models.Person(FirstName, LastName, Contacts, PrimaryContact);
     }
 }
