@@ -9,53 +9,49 @@ namespace Substitution.Builders.Person
 {
     public class PersonBuilder: IFirstNameHolder, ILastNameHolder, IPrimaryContactHolder, IContanctHolder, IPersonBuilder
     {
-        private INonEmptyStringState FirstNameState { get; set; }
-            = new UninitializedString();
-        private INonEmptyStringState LastNameState { get; set; }
-            = new UninitializedString();
-        private IPrimaryContactState PrimaryContact { get; set; }
-        public IList<IContactInfo> Contacts { get; }
-        private PersonBuilder()
-        {
-            Contacts = new List<IContactInfo>();
-            PrimaryContact = new UninitializedPrimaryContact(Contacts.Contains);
-        }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        private IContactInfo PrimaryContact { get; set; }
+        public IList<IContactInfo> Contacts { get; set; } = new List<IContactInfo>(); 
         public static IFirstNameHolder Person()
             => new PersonBuilder();
         public ILastNameHolder WithFirstName(string firstName)
-        {
-            FirstNameState = FirstNameState.Set(firstName);
-            return this;
-        }
+            => new PersonBuilder
+            {
+                FirstName = firstName
+            };
         public IPrimaryContactHolder WithLastName(string lastName)
-        {
-            LastNameState = LastNameState.Set(lastName);
-            return this;
-        }
+            => new PersonBuilder
+            {
+                FirstName = this.FirstName,
+                LastName = lastName
+            };
         public IContanctHolder WithSecondaryContact(IContactInfo contact)
+        => new PersonBuilder
         {
-            if (Contacts.Contains(contact))
-                throw new ArgumentException();
-
-            Contacts.Add(contact);
-            return this;
-        }
+            FirstName = this.FirstName,
+            LastName = this.LastName,
+            Contacts = new List<IContactInfo>(Contacts) { contact },
+            PrimaryContact = this.PrimaryContact
+        };
 
         public IContanctHolder WithPrimaryContact(IContactInfo contact)
+        => new PersonBuilder
         {
-            WithSecondaryContact(contact);
-            PrimaryContact = PrimaryContact.Set(contact);
-            return this;
-        }
+            FirstName = this.FirstName,
+            LastName = this.LastName,
+            Contacts = new List<IContactInfo>(this.Contacts) { contact },
+            PrimaryContact = contact
+        };
         public IPersonBuilder AndNoMoreContacts()
             => this;
 
         public Models.Person Build()
         {
-            var person = new Models.Person(FirstNameState.Get(), LastNameState.Get());
+            var person = new Models.Person(FirstName, LastName);
             foreach (var contact in Contacts)
                 person.Add(contact);
-            person.SetPrimaryContact(PrimaryContact.Get());
+            person.SetPrimaryContact(PrimaryContact);
             return person;
         }
     }
