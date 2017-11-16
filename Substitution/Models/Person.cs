@@ -7,8 +7,10 @@ namespace Substitution.Models
 {
     public class Person: IUser
     {
-        private IList<IContactInfo> Contacts { get; } 
-        private IContactInfo PrimaryContact { get; }
+        public IList<IContactInfo> Contacts { get; } 
+        public IContactInfo PrimaryContact { get; }
+        public string Name { get; }
+        public string Surname { get; }
         public void SetIdentity(IUserIdentity identity)
         {
 
@@ -23,8 +25,6 @@ namespace Substitution.Models
         public bool CanAcceptIdentity(IUserIdentity identity) =>
             identity is IdentityCard;
 
-        public string Name { get; }
-        public string Surname { get; }
         public Person(string name, string surname)
         {
             this.Name = name;

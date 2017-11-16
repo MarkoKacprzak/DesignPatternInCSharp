@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Builders\Interfaces\" />
     <Folder Include="Builders\Machine\" />
   </ItemGroup>
 

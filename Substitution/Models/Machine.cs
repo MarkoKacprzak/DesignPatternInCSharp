@@ -8,6 +8,8 @@ namespace Substitution.Models
         public Producer Producer { get; set; }
         public string Model { get; set; }
 
+        public IContactInfo PrimaryContact => throw new NotImplementedException();
+
         public void SetIdentity(IUserIdentity identity)
         {
             if (!this.CanAcceptIdentity(identity))

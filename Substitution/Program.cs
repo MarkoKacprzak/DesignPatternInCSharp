@@ -12,16 +12,18 @@ namespace Substitution
     {
         static void ConfigureUser()
         {
-            var person = PersonBuilder
+            PersonalManager mgr=new PersonalManager(
+                PersonBuilder
                 .Person()
                 .WithFirstName("Max")
                 .WithLastName("Planc")
                 .WithPrimaryContact(new EmailAdress("MarekKacprzak@o2.pl"))
                 .WithSecondaryContact(new EmailAdress("MarekKacprzak@windowslive.com"))
                 .AndNoMoreContacts()
-                .Build();
+                .Build);
+            mgr.Notify("hello");
            // builder.SetPrimaryContact(email);
-            Console.WriteLine(person);
+            //Console.WriteLine(person);
 
             IUserFactory factory = new PersonFactory();
             IUser user = factory.CreateUser("Max", "Planck");

@@ -4,5 +4,6 @@
     {
         void SetIdentity(IUserIdentity identity);
         bool CanAcceptIdentity(IUserIdentity identity);
+        IContactInfo PrimaryContact { get; }
     }
 }
